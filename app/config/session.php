@@ -48,23 +48,20 @@ function checkAccess($requiredPermission) {
 
     $userRole = $_SESSION['rol'];
   
-//Definimos los permisos de cada rol
-$permissions = [
-    'administrador' => [
-        'home','dashboard', 'manage_users', 'offer_services', 'search_services', 'view_reports', 'edit_content', 'view_content',
-    ],
-    'usuarioOfrece' => [
-        'home','dashboard', 'offer_services', 'view_content',
-    ],
-    'usuarioBusca' => [
-        'home','dashboard', 'search_services', 'view_content',
-    ],
-];
+    //Definimos los permisos de cada rol
+    $permissions = [
+        'administrador' => [
+            'home','dashboard', 'manage_users', 'offer_services', 'search_services', 'view_reports', 'edit_content', 'view_content',
+        ],
+        'usuarioOfrece' => [
+            'home','dashboard', 'offer_services', 'view_content',
+        ],
+        'usuarioBusca' => [
+            'home','dashboard', 'search_services', 'view_content',
+        ],
+    ];
 
     // Verificar si el rol tiene el permiso requerido
-    if (!isset($permissions[$userRole]) || !in_array($requiredPermission, $permissions[$userRole])) {
-        die('No tienes permiso para acceder a esta página.');
-        exit();
-    }
+    return isset($permissions[$userRole]) && in_array($requiredPermission, $permissions[$userRole]);
 }
 ?>

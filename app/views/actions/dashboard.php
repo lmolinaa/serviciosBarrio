@@ -2,15 +2,6 @@
 <?php
     include '../../../public/plantillas/cabecera.php'; // Incluir el archivo cabecera.php
 
-    // Verificar si las variables de sesión están definidas
-    /*if (isset($_SESSION['nombre']) && isset($_SESSION['rol']) && isset($_SESSION['email'])) {
-        echo "Nombre: " . $_SESSION['nombre'] . "<br>";
-        echo "Rol: " . $_SESSION['rol'] . "<br>";
-        echo "Email: " . $_SESSION['email'] . "<br>";
-    } else {
-    echo "No hay datos de sesión disponibles.";
-    }*/
-
     //Incluimos el mapa de la ubicación del usuario   
     include '../../views/user/geoUsers.php';
 ?>
@@ -18,7 +9,7 @@
 <script src="/marketplace/public/js/geolocalizacion.js"></script>
 
 <div class="centrarB">
-    <a href="../../views/user/viewUsersList.php" class="btn btn-primary">Ver  lista de usuarios</a>
+    <!--<a href="../../views/user/viewUsersList.php" class="btn btn-primary">Ver  lista de usuarios</a>-->
     <a href="./buscoOfrezco.php" class="btn btn-primary">Buscar/Ofrecer Servicios</a>
 </div>
 

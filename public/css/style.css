@@ -149,3 +149,80 @@ a:hover {
     text-decoration: underline;
     color: #0d1b2a;
 }
+
+/* Aunque este apartado es general, está pensado principalmente para la lista deplegable de categorías y servicios*/
+details {
+    background-color: #C9ECFF;
+    border: 1px solid #B6D9E5;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+summary {
+    background-color: #CFD4FC;
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+summary:hover {
+    background-color: #AEB3F9;
+    color: #fff;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 20px;
+}
+li {
+    margin-bottom: 5px;
+}
+li a {
+    text-decoration: none;
+    color: #34495E;
+}
+li a:hover {
+    color: #1ABC9C;
+    text-decoration: underline;
+}
+
+/* Espacio adicional para separar del pie de página */
+.accordion-container {
+    padding-bottom: 75px; 
+}
+
+/* Decoramos etiquetas de la cabeceras */
+h1, h2 {
+    background: linear-gradient(135deg, #C9ECFF, #CFD4FC);
+    border-radius: 12px;
+    color: #2C3E50;
+    padding: 15px 20px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 80%; /* Ajustar ancho máximo para centrarlo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    border: 4px solid #B6D9E5;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    border: 2px dashed #AEB3F9;
+    font-size: 2em;
+    text-transform: capitalize;
+}
+
+h1:hover, h2:hover {
+    background: linear-gradient(135deg, #CFD4FC, #C9ECFF);
+    color: #1ABC9C;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Efecto sutil de aumento */
+    transition: all 0.3s ease-in-out;
+}

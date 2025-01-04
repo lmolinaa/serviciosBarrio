@@ -2,59 +2,64 @@
 <?php
     include '../../../public/plantillas/cabecera.php'; // Incluir el archivo cabecera.php
 
-        /*echo "Nombre: " . $_SESSION['nombre'] . " - ";
-        echo "Rol: " . $_SESSION['rol'] . " - ";
-        echo "Email: " . $_SESSION['email'] . "<br>";*/
+    //llamo a la checkAccess para controlar lo que puede ver el usuario en función del rol
+   $permisos = checkAccess('edit_content'); // Verificar los permisos del usuario
 
-if ($servicios) {
-    echo '<div class="container mt-5">';
-    echo '<h2 class="text-center">Listado de Servicios</h2>';
-    echo '<div class="table-container">';
-    echo '<table class="tableUsers table-bordered table-hover">';
-    echo '<thead>';
-    echo '<tr>';
-    echo '<th>Categoría</th>';
-    echo '<th>Servicios</th>';
-    echo '</tr>';
-    echo '</thead>';
-    echo '<tbody>';
-    foreach ($servicios as $categoria => $listaServicios) {
-        // Validar que la categoría sea un string
-        if (is_string($categoria)) {
-            echo '<tr>';
-            echo '<td colspan="2" class="fw-bold"><a href="#">' . ucfirst(str_replace('_', ' ', htmlspecialchars($categoria))) . '</a></td>';
-            echo '</tr>';
-            // Validar que la lista de servicios sea un array
-            if (is_array($listaServicios)) {
-                foreach ($listaServicios as $servicio) {
-                    // Validar que el servicio sea un string antes de mostrarlo
-                    if (is_string($servicio)) {
-                        echo '<tr>';
-                        echo '<td></td>'; // Celda vacía para alinear los servicios
-                        echo '<td><a href="#">' . htmlspecialchars($servicio) . '</a></td>';
-                        echo '</tr>';
-                    } else {
-                        echo '<tr>';
-                        echo '<td></td>'; // Celda vacía para alinear los servicios
-                        echo '<td>Elemento no válido</td>';
-                        echo '</tr>';
+ //Verificar si el parámetro 'categoria' está presente en la URL (ocurre cuando es llamado desde el menú superior)
+ $categoria = ""; //Si get es '' el listado permanece cerrado
+ if (isset($_GET['categoria'])) {
+    $categoria = trim(urldecode($_GET['categoria'])); // Decodificar el valor
+    $categoria = str_replace('_', ' ', $categoria); // Reemplazar guiones bajos por espacios
+}
+
+    if ($servicios) {
+        echo '<div class="container mt-5">';
+        echo '<h2 class="text-center">Listado de Servicios</h2>';
+        echo '<div class="accordion-container">';
+    
+        foreach ($servicios as $nombreCategoria => $listaServicios) {
+            // Validar que la categoría sea un string
+            if (is_string($nombreCategoria)) {
+            // Procesar el nombre de la categoría para comparación (como en el menú)
+            $categoriaProcesada = ucfirst(str_replace("_", " ", htmlspecialchars($nombreCategoria)));
+
+            // Comparar con el valor de la categoría recibida por GET
+            $isOpen = (strcasecmp($categoria, $categoriaProcesada) === 0) ? ' open' : '';
+
+            echo '<details' . $isOpen . '>'; // Añadir el atributo open si coincide
+            echo '<summary>' . ucfirst(str_replace('_', ' ', htmlspecialchars($nombreCategoria))) . '</summary>';
+
+                // Validar que la lista de servicios sea un array
+                if (is_array($listaServicios)) {
+                    echo '<ul>';
+                    foreach ($listaServicios as $servicio) {
+                        // Validar que el servicio sea un string antes de mostrarlo
+                        if (is_string($servicio)) {
+                            echo '<li><a href="#">' . htmlspecialchars($servicio) . '</a>';
+                            if ($permisos){
+                                /******************* Está pendiente de desarrollar el edit y el delete ************** */
+                                echo '<a href="/marketplace/app/views/actions/editService.php?categoria=' . urlencode($nombreCategoria) . '&servicio=' . urlencode($servicio) . '"><img width="24px" height="24" src="/marketplace/public/img/iconos/pencil-outline.svg" data-bs-toggle="tooltipAll" data-bs-placement="top" title="Editar"></a>';
+                                echo '<a href="/marketplace/app/views/actions/deleteService.php?categoria=' . urlencode($nombreCategoria) . '&servicio=' . urlencode($servicio) . '"><img width="24px" height="24" src="/marketplace/public/img/iconos/trash-outline.svg" data-bs-toggle="tooltipAll" data-bs-placement="top" title="Eliminar"></a>';
+                            }
+                            echo '</li>';
+                            
+                        } else {
+                            echo '<li>Elemento no válido</li>';
+                        }
                     }
+                    echo '</ul>';
+                } else {
+                    echo '<p>Lista de servicios no válida</p>';
                 }
-            } else {
-                echo '<tr>';
-                echo '<td></td>'; // Celda vacía para alinear los servicios
-                echo '<td>Lista de servicios no válida</td>';
-                echo '</tr>';
+    
+                echo '</details>';
             }
         }
+        echo '</div>';
+        echo '</div>';
+    } else {
+        echo "No se pudo cargar la lista de servicios.";
     }
-    echo '</tbody>';
-    echo '</table>';
-    echo '</div>';
-    echo '</div>';
-} else {
-    echo "No se pudo cargar la lista de servicios.";
-}
 ?>
 </div>
 

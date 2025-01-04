@@ -291,3 +291,35 @@
 2025-01-03 17:36:55 viewUsersList - Lista de usuarios 
 2025-01-03 17:37:07 checkUsers - Usuario: Eva Rol: usuarioBusca Email: eva@eva.com
 2025-01-03 17:37:07 userController - Verificación de usuario  Email eva@eva.com
+2025-01-04 09:41:31 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-04 09:41:31 userController - Verificación de usuario  Email luis@luis.es
+2025-01-04 09:46:11 checkUsers - Listado de usuarios mostrado
+2025-01-04 09:46:11 viewUsersList - Lista de usuarios 
+2025-01-04 10:31:04 checkUsers - Listado de usuarios mostrado
+2025-01-04 10:31:04 viewUsersList - Lista de usuarios 
+2025-01-04 10:31:32 checkUsers - Listado de usuarios mostrado
+2025-01-04 10:31:32 viewUsersList - Lista de usuarios 
+2025-01-04 10:48:07 checkUsers - Listado de usuarios mostrado
+2025-01-04 10:48:07 viewUsersList - Lista de usuarios 
+2025-01-04 10:48:47 checkUsers - Listado de usuarios mostrado
+2025-01-04 10:48:47 viewUsersList - Lista de usuarios 
+2025-01-04 10:49:01 checkUsers - Listado de usuarios mostrado
+2025-01-04 10:49:01 viewUsersList - Lista de usuarios 
+2025-01-04 10:49:39 checkUsers - Listado de usuarios mostrado
+2025-01-04 10:49:39 viewUsersList - Lista de usuarios 
+2025-01-04 11:16:36 checkUsers - Listado de usuarios mostrado
+2025-01-04 11:16:36 viewUsersList - Lista de usuarios 
+2025-01-04 11:16:43 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-04 11:16:43 userController - Verificación de usuario  Email luis@luis.es
+2025-01-04 11:26:07 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-04 11:26:07 userController - Verificación de usuario  Email luis@luis.es
+2025-01-04 11:26:30 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-04 11:26:30 userController - Verificación de usuario  Email luis@luis.es
+2025-01-04 11:37:12 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-04 11:37:12 userController - Verificación de usuario  Email luis@luis.es
+2025-01-04 11:56:40 checkUsers - Usuario: Eva Rol: usuarioBusca Email: eva@eva.com
+2025-01-04 11:56:40 userController - Verificación de usuario  Email eva@eva.com
+2025-01-04 11:56:55 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-04 11:56:55 userController - Verificación de usuario  Email luis@luis.es
+2025-01-04 12:06:47 checkUsers - Usuario: Eva Rol: usuarioBusca Email: eva@eva.com
+2025-01-04 12:06:47 userController - Verificación de usuario  Email eva@eva.com

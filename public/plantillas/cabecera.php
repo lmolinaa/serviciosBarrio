@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cabecera Marketplace</title>
+    <title>Marketplace</title>
     <!-- Bootstrap y CSS -->
     <!--<link rel="stylesheet" href="../../../public/css/bootstrap5.3.css">-->
     <link rel="stylesheet" href="../../../public/css/cabecera.css">
@@ -35,21 +35,21 @@ if (isset($_SESSION['email']) ?? '') {
 <!-- Cabecera -->
 <header>
     <img src="/marketplace/public/img/logotipo-sinFondo.png" alt="MarketPlace Logo">
-    <h1><strong>MarketPlace, tu plataforma de servicios</strong></h1>
+    <h3><strong>MarketPlace, tu plataforma de servicios</strong></h3>
     <nav>
         <ul class="menu">
             <li class="tab"><a href="/marketplace"><img width="24px" height="24" src='/marketplace/public/img/iconos/home-outline.svg'> Home</a></li>
             <li class="dropdown"><a href="/marketplace/app/views/actions/buscoOfrezco.php"><img width="24px" height="24" src='/marketplace/public/img/iconos/server-outline.svg'>Busco/Ofrezco Servicio</a>
                 <ul class="submenu">
                 <?php
-                    // Iterar sobre las categorías
+                    //Iterar sobre las categorías
                     foreach ($servicios as $categoria => $listaServicios) {
 
-                        $categoriaSeleccionada = ucfirst(str_replace("_", " ", htmlspecialchars($categoria)));
-                        // Validar que la categoría sea un string
-                        if (is_string($categoria)) {?>
-                           <li><a href="/marketplace/app/views/actions/categoria.php?categoria= <?php echo urlencode($categoriaSeleccionada) ?> "> <?php echo $categoriaSeleccionada?></a></li>
-                        <?php
+                        if (is_string($categoria)) {
+                            // Generar el enlace con urlencode
+                            $categoriaUrl = urlencode($categoria);
+                            $categoriaTexto = ucfirst(str_replace("_", " ", htmlspecialchars($categoria)));
+                            echo "<li><a href=\"/marketplace/app/views/actions/buscoOfrezco.php?categoria=$categoriaUrl\">$categoriaTexto</a></li>";
                         }
                     }
                 ?>               
