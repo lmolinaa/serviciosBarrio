@@ -37,15 +37,16 @@
         </p>
 
         <p>
-            <strong>¿Cuál es nuestro objetivo?</strong><br> Nuestro logo representa <strong>un mundo interconectado</strong> entre sí, un planeta de personas que interactúan unas con otras para alcanzar aquello que realmente necesitan.
-            MarketPlace es la plataforma diseñada para ayudarte a lograrlo. ¿Tienes un negocio y ofreces un servicio? <strong>Pues date de alta en <a href="./app/views/user/formCreateUsers.php">MarketPlace</a></strong> y encuentra tu próximo cliente.
-            ¿Buscas un servicio en tu zona?<strong> Pues date de alta en <a href="./app/views/user/formCreateUsers.php">MarketPlace</a></strong> y contacta con tu profesional más cercano.
+            <strong>¿Cuál es nuestro objetivo?</strong><br>
+            Nuestro logo representa <strong>un mundo interconectado</strong>, un planeta de personas que interactúan unas con otras para alcanzar aquello que realmente necesitan.
+            MarketPlace es la plataforma diseñada para ayudarte a lograrlo. ¿Tienes un negocio y ofreces un servicio? Entonces, a qué esperas para darte de alta en <a href="./app/views/user/formCreateUsers.php"><strong>MarketPlace</strong></a> y así encontrar a <strong>tu próximo cliente.</strong><br>
+            ¿Buscas un servicio en tu zona? Pues date de alta en <a href="./app/views/user/formCreateUsers.php"><strong>MarketPlace</strong></a> y <strong>contacta con tu profesional más cercano.</strong>
             <img src="./public/img/logotipoOriginal.jpg" alt="logotipo marketplace">
-            Nuestro objetivo es interconectar a las personas que necesitan algo con aquellas que ofrecen ese algo.
+            Nuestro objetivo es interconectar a las personas que necesitan algo con aquellas que ofrecen ese algo, tales como 
             <strong>Servicios del hogar, clases particulares, cuidado de mascotas, reparaciones en general, eventos, transportes y mudanzas, etc. </strong>
-            Todo al alcance de tu mano de forma rápida y sencilla
+            Y todo al alcance de tu mano de forma rápida y sencilla.
         <br>
-            Empieza a buscar y/u ofrecer servicios de todo tipo.
+            Empieza a buscar y/u ofrecer servicios de todo tipo en tu barrio.
         <a href="./app/views/user/formCreateUsers.php"><strong>¡Regístrate ahora!</strong></a>
         </p>
     </div>
@@ -53,7 +54,7 @@
 <div class="right-section" style="flex: 1; text-align: center;">
     <!-- Imagen representativa de la app -->
     <img src="./public/img/imagen_portada.png" alt="Imagen representativa de servicios locales">
-    <button id="crear_cuenta">
+    <button class='botonDeco' id="crear_cuenta">
         Crear una cuenta
     </button>
 </div>

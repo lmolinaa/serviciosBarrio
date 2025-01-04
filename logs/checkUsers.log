@@ -323,3 +323,22 @@
 2025-01-04 11:56:55 userController - Verificación de usuario  Email luis@luis.es
 2025-01-04 12:06:47 checkUsers - Usuario: Eva Rol: usuarioBusca Email: eva@eva.com
 2025-01-04 12:06:47 userController - Verificación de usuario  Email eva@eva.com
+2025-01-04 16:35:14 checkUsers - Usuario: Eva Rol: usuarioBusca Email: eva@eva.com
+2025-01-04 16:35:14 userController - Verificación de usuario  Email eva@eva.com
+2025-01-04 17:42:34 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-04 17:42:34 userController - Verificación de usuario  Email luis@luis.es
+2025-01-04 17:43:30 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-04 17:43:30 userController - Verificación de usuario  Email luis@luis.es
+2025-01-04 18:01:21 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-04 18:01:21 userController - Verificación de usuario  Email luis@luis.es
+2025-01-04 18:29:22 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-04 18:29:22 userController - Verificación de usuario  Email luis@luis.es
+2025-01-04 18:33:20 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-04 18:33:20 userController - Verificación de usuario  Email luis@luis.es
+2025-01-04 18:45:54 checkUsers - Contraseña incorrecta para usuario Luis con email luis@luis.es hash de bbdd $2y$10$bB7UNyfRXYm2NA6f105dH.9UtlfbzBanI/QiWmZ3ivwni9rmziiyy password del post luisM
+2025-01-04 18:48:56 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-04 18:48:56 userController - Verificación de usuario  Email luis@luis.es
+2025-01-04 18:49:19 checkUsers - Listado de usuarios mostrado
+2025-01-04 18:49:19 viewUsersList - Lista de usuarios 
+2025-01-04 18:54:35 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-04 18:54:35 userController - Verificación de usuario  Email luis@luis.es

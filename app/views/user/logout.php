@@ -1,14 +1,25 @@
     <!-- Cabecera -->
     <?php
     include '../../../public/plantillas/cabecera.php'; // Incluir el archivo cabecera.php
+    
+    $mensaje = '';
     //Llamamos a la función logoutUser para cerrar la sesión.
     logoutUser();
+
+    if (isset($_GET['mensaje'])) {
+        $mensaje = $_GET['mensaje'];
+    }
+    if(isset($_GET['timeout']) == 'true'){
+        $mensaje = 'La sesión ha caducado, por favor, vuelva a hacer el login.';
+    }
     ?>
 <div class="container mt-5 text-center">
         <div class="alert alert-warning">
-            <strong>Sesión cerrada.</strong>
+            <strong><?php echo $mensaje ?></strong>
         </div>
-    <a href="/marketplace" class="btn btn-primary">Volver al Home</a>
+        <button class='botonDeco' id="Volver al Home" onclick="window.location.href='/marketplace';">
+            Volver al Home
+        </button>
 </div>
 
 <!-- Pie de página -->

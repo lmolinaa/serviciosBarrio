@@ -9,8 +9,27 @@
 <script src="/marketplace/public/js/geolocalizacion.js"></script>
 
 <div class="centrarB">
-    <!--<a href="../../views/user/viewUsersList.php" class="btn btn-primary">Ver  lista de usuarios</a>-->
-    <a href="./buscoOfrezco.php" class="btn btn-primary">Buscar/Ofrecer Servicios</a>
+    <button class='botonDeco' id="Volver al Home" onclick="window.location.href='./buscoOfrezco.php';">
+        Buscar/Ofrecer Servicios
+    </button>
+</div>
+
+<!-- Modal de inicio de sesión -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Mensaje de error dinámico -->
+                <?php
+                include '../user/login.php'; // Incluir el archivo login.php
+                ?>
+            </div>
+        </div>
+    </div>
 </div>
 
     <!-- Pie de página -->

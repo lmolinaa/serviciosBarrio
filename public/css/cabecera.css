@@ -26,8 +26,19 @@ nav .menu {
 }
 
 nav .menu > li {
-    margin: 0 10px;
     position: relative;
+    margin-right: 20px;
+}
+
+nav .menu > li > a {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+
+nav .menu > li > a img {
+    margin-right: 8px;
 }
 
 nav .menu > li a {
@@ -44,11 +55,23 @@ nav .menu > li a {
     height: 24px;
     display: inline-block;
     margin-right: 8px;
+    vertical-align: middle;
+}
+
+.iconoSubmenu {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
 }
 
 .iconoMenu svg {
     width: 24px;
     height: 24px;
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
 }
 
 /* Estilo para las pestañas */
@@ -74,22 +97,32 @@ nav .menu > .dropdown .submenu {
     padding: 0;
     position: absolute;
     top: 100%;
-    left: 0;
+    right: auto; /* Restablecer cualquier valor previo de right */
+    left: 0; /* Alinear a la izquierda */
+    max-width: calc(100vw - 20px); /* Asegurar que el submenú no se salga de la pantalla */
+    overflow-x: auto; /* Permitir el desplazamiento horizontal si es necesario */
     background-color: #C9ECFF;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: none; /* Ocultar el submenú inicialmente */
+    display: none; /*Ocultar el submenú inicialmente*/
     z-index: 1000;
-    white-space: nowrap; /* Evitar que el contenido del submenú haga salto de línea */
+    white-space: nowrap; /*Evitar que el contenido del submenú haga salto de línea */
 }
 
 nav .menu > .dropdown .submenu li {
-    padding: 10px 15px;
+    padding: 5px 10px;
+    margin: 0;
 }
 
 nav .menu > .dropdown .submenu li a {
     text-decoration: none;
     color: #162640;
     font-size: 0.9em;
+    display: flex;
+    align-items: center;
+}
+
+nav .menu > .dropdown .submenu li a img {
+    margin-right: 8px;
 }
 
 nav .menu > .dropdown:hover .submenu {

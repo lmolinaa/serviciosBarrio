@@ -4,6 +4,7 @@ session_start();
 
 // Tiempo máximo de inactividad en segundos (1 hora)
 define('SESSION_TIMEOUT', 3600);
+$mensaje = "";
 
 // Verifica si la sesión está activa y si se ha excedido el tiempo de inactividad
 function verifySession() {
@@ -42,7 +43,7 @@ function logoutUser() {
 //Control de acceso por roles
 function checkAccess($requiredPermission) {
     if (!isset($_SESSION['rol'])) {
-        header("Location: /marketplace/app/views/user/login.php");
+        header("Location: /marketplace/app/views/user/logout.php?mensaje=Para acceder a este módulo debe iniciar sesión."); 
         exit();
     }
 
@@ -51,13 +52,13 @@ function checkAccess($requiredPermission) {
     //Definimos los permisos de cada rol
     $permissions = [
         'administrador' => [
-            'home','dashboard', 'manage_users', 'offer_services', 'search_services', 'view_reports', 'edit_content', 'view_content',
+            'login','dashboard', 'offer_services', 'search_services', 'view_content', 'edit_content', 'delete_content',
         ],
         'usuarioOfrece' => [
-            'home','dashboard', 'offer_services', 'view_content',
+            'login','dashboard', 'offer_services', 'view_content',
         ],
         'usuarioBusca' => [
-            'home','dashboard', 'search_services', 'view_content',
+            'login','dashboard', 'search_services', 'view_content',
         ],
     ];
 

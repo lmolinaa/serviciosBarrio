@@ -19,7 +19,7 @@
             <input type="password" class="form-control" id="password" name="password" required>
         </div>
         <input type="hidden" name="action" value="checkUserExists">
-        <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+        <button type="submit" class='botonDeco'>Iniciar Sesión</button>
         </form>
     </div>
 

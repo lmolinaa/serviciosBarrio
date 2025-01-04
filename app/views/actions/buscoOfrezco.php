@@ -35,7 +35,7 @@
                     foreach ($listaServicios as $servicio) {
                         // Validar que el servicio sea un string antes de mostrarlo
                         if (is_string($servicio)) {
-                            echo '<li><a href="#">' . htmlspecialchars($servicio) . '</a>';
+                            echo '<li><a href="./serviciosCards.php?servicio=' . htmlspecialchars($servicio) . '">' . htmlspecialchars($servicio) . '</a>';
                             if ($permisos){
                                 /******************* Está pendiente de desarrollar el edit y el delete ************** */
                                 echo '<a href="/marketplace/app/views/actions/editService.php?categoria=' . urlencode($nombreCategoria) . '&servicio=' . urlencode($servicio) . '"><img width="24px" height="24" src="/marketplace/public/img/iconos/pencil-outline.svg" data-bs-toggle="tooltipAll" data-bs-placement="top" title="Editar"></a>';

@@ -65,7 +65,7 @@
             <input type="hidden" name="action" value="create">
         </div>
         <div class="text-center">
-            <button type="submit" class="btn btn-primary">Registrar</button>
+            <button class='botonDeco' type="submit">Registrar</button>
         </div>
     </form>
 </div>
