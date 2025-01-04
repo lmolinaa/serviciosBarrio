@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* Para el mapa */
+.containerMap {
+    display: flex;
+    max-width: 1800px;
+    width: 100%;
+    padding: 20px;
+}
+.info {
+    flex: 1;
+    padding: 20px;
+    margin-left: 200px;
+}
+#map {
+    flex: 1;
+    height: 400px;
+    margin-top: 20px;
+}
+
+#resultadoCP {
+    width: 200px;
+    margin-top: 10px;
+}
+
+#municipios {
+    width: 200px;
+    margin-top: 10px;
+}
+
+.centrarB {
+    display: flex;
+    flex-direction: row; /* Organiza los elementos en fila */
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  .centrarB a {
+    margin: 10px; /* Espaciado entre los enlaces */
+  }
+
+a {
+    color: #325388;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0d1b2a;
+}
+
+.table-container {
+    max-height: 400px; /* Define la altura máxima del contenedor */
+    overflow-y: auto;  /* Permitir desplazamiento vertical */
+    overflow-x: auto;  /* Permitir desplazamiento horizontal */
+    border: 1px solid #ddd; /* Opcional: bordes para mejorar la visibilidad */
+}
+
+.tableUsers {
+    width: 100%; /* Asegurarte de que la tabla ocupe todo el ancho */
+    border-collapse: collapse;
+}
+
+.tableUsers th, .tableUsers td {
+    text-align: left;
+    padding: 8px;
+}
+
+.tableUsers th {
+    position: sticky;
+    top: 0;
+    background-color: #C9ECFF; /* Asegura que el encabezado siga visible al hacer scroll */
+}
+
+.tableUsers tbody {
+    background-color: #CFD4FC;
+}
+
+/* Cuerpo de la página */
+.landing-container {
+    text-align: justify;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.landing-container h2 {
+    color: #162640;
+    font-size: 2em;
+    text-align: center;
+}
+
+.landing-container p {
+    color: #333;
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Ajustamos el tamaño de la imagen de la derecha/*/
+.right-section img {
+    max-width: 75%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centrar la imagen */
+}
+
+.right-section button {
+    background-color: #162640;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0; /* Centrar el botón y agregar margen superior */
+}
+
+/* Ajustamos el tamaño de la imagen de la izquierda */
+.left-section img {
+    max-width: 60%; /* establecer tamaño imagen en % */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px; /* Centrar la imagen y agregar margen inferior */
+    float: left; /* Hacer que la imagen flote a la izquierda */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Alinear verticalmente el contenido */
+}
+
+.left-section a {
+    color: #1f59b6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.left-section a:hover {
+    text-decoration: underline;
+    color: #0d1b2a;
+}

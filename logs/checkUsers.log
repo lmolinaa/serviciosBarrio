@@ -1,0 +1,293 @@
+2024-12-27 10:37:02 - Contraseña incorrecta para usuario Luis con email luis@luis.es hash de bbdd $2y$10$/JZChq/hI51.fieF5dIua.mo0141LSVfE0AdTCvXV3sW1fptFhghW password del post luis
+2024-12-27 10:37:36 - Usuario Eva autenticado con rol usuarioBusca
+2024-12-27 10:37:36 - Verificación de usuario  Email eva@eva.com
+2024-12-27 10:44:56 - Usuario Nadie autenticado con rol usuarioOfrece
+173529269656Europe/BerlinFri, 27 Dec 2024 10:44:56 +0100C20241231Fri, 27 Dec 2024 10:44:56 +01002024FridayFridayEurope/BerlinFri, 27 Dec 2024 10:44:56 +0100 - 2024-12-27 10:44:56 - Verificación de usuario  Email nadie@nadie.com
+2024-12-27 10:49:28 checkUsers - Usuario Eva autenticado con rol usuarioBusca
+2024-12-27 10:49:28 userController - Verificación de usuario  Email eva@eva.com
+2024-12-27 10:50:41 checkUsers - Usuario Luis autenticado con rol administrador
+2024-12-27 10:50:41 userController - Verificación de usuario  Email luis@luis.es
+2024-12-27 10:52:04 checkUsers - Contraseña incorrecta para usuario Luis con email luis@luis.es hash de bbdd $2y$10$/JZChq/hI51.fieF5dIua.mo0141LSVfE0AdTCvXV3sW1fptFhghW password del post luism
+2024-12-27 10:55:52 checkUsers - Listado de usuarios mostrado
+2024-12-27 11:25:33 checkUsers - Usuario Luis autenticado con rol administrador
+2024-12-27 11:25:33 userController - Verificación de usuario  Email luis@luis.es
+2024-12-27 11:46:51 checkUsers - Usuario Patricio autenticado con rol usuarioBusca
+2024-12-27 11:46:51 userController - Verificación de usuario  Email patricio@patricio.com
+2024-12-27 12:02:40 checkUsers - Contraseña incorrecta para usuario Luis con email luis@luis.es hash de bbdd $2y$10$bB7UNyfRXYm2NA6f105dH.9UtlfbzBanI/QiWmZ3ivwni9rmziiyy password del post luisM
+2024-12-27 12:02:49 checkUsers - Usuario Luis autenticado con rol administrador
+2024-12-27 12:02:49 userController - Verificación de usuario  Email luis@luis.es
+2024-12-27 12:03:09 checkUsers - Usuario Eva autenticado con rol usuarioBusca
+2024-12-27 12:03:09 userController - Verificación de usuario  Email eva@eva.com
+2024-12-27 13:36:40 checkUsers - Usuario Luis autenticado con rol administrador
+2024-12-27 13:36:40 userController - Verificación de usuario  Email luis@luis.es
+2024-12-27 13:37:58 checkUsers - Usuario Luis autenticado con rol administrador
+2024-12-27 13:37:58 userController - Verificación de usuario  Email luis@luis.es
+2024-12-27 13:52:32 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-27 13:52:32 userController - Verificación de usuario  Email luis@luis.es
+2024-12-27 13:56:03 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-27 13:56:03 userController - Verificación de usuario  Email luis@luis.es
+2024-12-27 14:05:22 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-27 14:05:22 userController - Verificación de usuario  Email luis@luis.es
+2024-12-27 14:06:01 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-27 14:06:01 userController - Verificación de usuario  Email luis@luis.es
+2024-12-27 14:07:55 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-27 14:07:55 userController - Verificación de usuario  Email luis@luis.es
+2024-12-27 14:17:21 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-27 14:17:21 userController - Verificación de usuario  Email luis@luis.es
+2024-12-27 14:21:11 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-27 14:21:11 userController - Verificación de usuario  Email luis@luis.es
+2024-12-27 14:28:57 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-27 14:28:57 userController - Verificación de usuario  Email luis@luis.es
+2024-12-27 14:36:07 checkUsers - Contraseña incorrecta para usuario Luis con email luis@luis.es hash de bbdd $2y$10$bB7UNyfRXYm2NA6f105dH.9UtlfbzBanI/QiWmZ3ivwni9rmziiyy password del post luisM
+2024-12-27 17:37:51 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-27 17:37:51 userController - Verificación de usuario  Email luis@luis.es
+2024-12-27 18:28:36 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-27 18:28:36 userController - Verificación de usuario  Email luis@luis.es
+2024-12-27 18:30:43 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-27 18:30:43 userController - Verificación de usuario  Email luis@luis.es
+2024-12-27 18:31:25 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-27 18:31:25 userController - Verificación de usuario  Email luis@luis.es
+2024-12-27 18:31:38 checkUsers - Contraseña incorrecta para usuario Luis con email luis@luis.es hash de bbdd $2y$10$bB7UNyfRXYm2NA6f105dH.9UtlfbzBanI/QiWmZ3ivwni9rmziiyy password del post luisM
+2024-12-27 18:31:48 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-27 18:31:48 userController - Verificación de usuario  Email luis@luis.es
+2024-12-27 19:03:26 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-27 19:03:26 userController - Verificación de usuario  Email luis@luis.es
+2024-12-27 19:11:59 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-27 19:11:59 userController - Verificación de usuario  Email luis@luis.es
+2024-12-27 19:13:23 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:13:35 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-27 19:13:35 userController - Verificación de usuario  Email luis@luis.es
+2024-12-27 19:13:41 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:14:36 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-27 19:14:36 userController - Verificación de usuario  Email luis@luis.es
+2024-12-27 19:14:40 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:19:05 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-27 19:19:05 userController - Verificación de usuario  Email luis@luis.es
+2024-12-27 19:19:31 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:21:06 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-27 19:21:06 userController - Verificación de usuario  Email luis@luis.es
+2024-12-27 19:21:09 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:29:04 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:29:04 viewUsersList - Lista de usuarios 
+2024-12-27 19:29:58 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:29:58 viewUsersList - Lista de usuarios 
+2024-12-27 19:30:23 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:30:23 viewUsersList - Lista de usuarios 
+2024-12-27 19:37:45 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:37:45 viewUsersList - Lista de usuarios 
+2024-12-27 19:39:38 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:39:38 viewUsersList - Lista de usuarios 
+2024-12-27 19:39:40 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:39:40 viewUsersList - Lista de usuarios 
+2024-12-27 19:40:59 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:40:59 viewUsersList - Lista de usuarios 
+2024-12-27 19:41:46 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:41:46 viewUsersList - Lista de usuarios 
+2024-12-27 19:42:46 checkUsers - Usuario: Eva Rol: usuarioBusca Email: eva@eva.com
+2024-12-27 19:42:46 userController - Verificación de usuario  Email eva@eva.com
+2024-12-27 19:42:48 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:42:48 viewUsersList - Lista de usuarios 
+2024-12-27 19:44:50 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:44:50 viewUsersList - Lista de usuarios 
+2024-12-27 19:48:21 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:48:21 viewUsersList - Lista de usuarios 
+2024-12-27 19:48:40 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:48:40 viewUsersList - Lista de usuarios 
+2024-12-27 19:49:24 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:49:24 viewUsersList - Lista de usuarios 
+2024-12-27 19:49:45 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:49:45 viewUsersList - Lista de usuarios 
+2024-12-27 19:50:17 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:50:17 viewUsersList - Lista de usuarios 
+2024-12-27 19:50:26 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:50:26 viewUsersList - Lista de usuarios 
+2024-12-27 19:50:59 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:50:59 viewUsersList - Lista de usuarios 
+2024-12-27 19:51:19 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:51:19 viewUsersList - Lista de usuarios 
+2024-12-27 19:53:29 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:53:29 viewUsersList - Lista de usuarios 
+2024-12-27 19:54:30 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:54:30 viewUsersList - Lista de usuarios 
+2024-12-27 19:54:40 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:54:40 viewUsersList - Lista de usuarios 
+2024-12-27 19:55:33 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:55:33 viewUsersList - Lista de usuarios 
+2024-12-27 19:56:07 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:56:07 viewUsersList - Lista de usuarios 
+2024-12-27 19:56:24 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:56:24 viewUsersList - Lista de usuarios 
+2024-12-27 19:56:36 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:56:36 viewUsersList - Lista de usuarios 
+2024-12-27 19:56:47 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:56:47 viewUsersList - Lista de usuarios 
+2024-12-27 19:58:01 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:58:01 viewUsersList - Lista de usuarios 
+2024-12-27 19:58:43 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:58:43 viewUsersList - Lista de usuarios 
+2024-12-27 19:58:59 checkUsers - Listado de usuarios mostrado
+2024-12-27 19:58:59 viewUsersList - Lista de usuarios 
+2024-12-27 20:00:55 checkUsers - Listado de usuarios mostrado
+2024-12-27 20:00:55 viewUsersList - Lista de usuarios 
+2024-12-27 20:01:42 checkUsers - Listado de usuarios mostrado
+2024-12-27 20:01:42 viewUsersList - Lista de usuarios 
+2024-12-27 20:02:32 checkUsers - Listado de usuarios mostrado
+2024-12-27 20:02:32 viewUsersList - Lista de usuarios 
+2024-12-27 20:03:29 checkUsers - Listado de usuarios mostrado
+2024-12-27 20:03:29 viewUsersList - Lista de usuarios 
+2024-12-27 20:04:08 checkUsers - Listado de usuarios mostrado
+2024-12-27 20:04:08 viewUsersList - Lista de usuarios 
+2024-12-28 08:40:48 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-28 08:40:48 userController - Verificación de usuario  Email luis@luis.es
+2024-12-28 08:40:52 checkUsers - Listado de usuarios mostrado
+2024-12-28 08:40:52 viewUsersList - Lista de usuarios 
+2024-12-28 08:41:11 checkUsers - Listado de usuarios mostrado
+2024-12-28 08:41:11 viewUsersList - Lista de usuarios 
+2024-12-28 08:41:14 checkUsers - Listado de usuarios mostrado
+2024-12-28 08:41:14 viewUsersList - Lista de usuarios 
+2024-12-28 08:41:37 checkUsers - Listado de usuarios mostrado
+2024-12-28 08:41:37 viewUsersList - Lista de usuarios 
+2024-12-28 08:41:39 checkUsers - Listado de usuarios mostrado
+2024-12-28 08:41:39 viewUsersList - Lista de usuarios 
+2024-12-28 08:41:48 checkUsers - Listado de usuarios mostrado
+2024-12-28 08:41:48 viewUsersList - Lista de usuarios 
+2024-12-28 08:50:12 checkUsers - Listado de usuarios mostrado
+2024-12-28 08:50:12 viewUsersList - Lista de usuarios 
+2024-12-28 09:20:29 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-28 09:20:29 userController - Verificación de usuario  Email luis@luis.es
+2024-12-28 09:20:32 checkUsers - Listado de usuarios mostrado
+2024-12-28 09:20:32 viewUsersList - Lista de usuarios 
+2024-12-28 09:20:44 checkUsers - Listado de usuarios mostrado
+2024-12-28 09:20:44 viewUsersList - Lista de usuarios 
+2024-12-28 09:24:09 checkUsers - Usuario: Eva Rol: usuarioBusca Email: eva@eva.com
+2024-12-28 09:24:09 userController - Verificación de usuario  Email eva@eva.com
+2024-12-28 09:26:39 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-28 09:26:39 userController - Verificación de usuario  Email luis@luis.es
+2024-12-28 09:26:40 checkUsers - Listado de usuarios mostrado
+2024-12-28 09:26:40 viewUsersList - Lista de usuarios 
+2024-12-28 10:08:57 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-28 10:08:57 userController - Verificación de usuario  Email luis@luis.es
+2024-12-29 10:19:46 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-29 10:19:46 userController - Verificación de usuario  Email luis@luis.es
+2024-12-29 17:00:44 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-29 17:00:44 userController - Verificación de usuario  Email luis@luis.es
+2024-12-29 17:00:49 checkUsers - Listado de usuarios mostrado
+2024-12-29 17:00:49 viewUsersList - Lista de usuarios 
+2024-12-29 17:01:02 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-29 17:01:02 userController - Verificación de usuario  Email luis@luis.es
+2024-12-29 17:01:07 checkUsers - Listado de usuarios mostrado
+2024-12-29 17:01:07 viewUsersList - Lista de usuarios 
+2024-12-29 17:02:15 checkUsers - Listado de usuarios mostrado
+2024-12-29 17:02:15 viewUsersList - Lista de usuarios 
+2024-12-29 17:02:16 checkUsers - Listado de usuarios mostrado
+2024-12-29 17:02:16 viewUsersList - Lista de usuarios 
+2024-12-29 17:02:33 checkUsers - Listado de usuarios mostrado
+2024-12-29 17:02:33 viewUsersList - Lista de usuarios 
+2024-12-29 17:02:33 checkUsers - Listado de usuarios mostrado
+2024-12-29 17:02:33 viewUsersList - Lista de usuarios 
+2024-12-29 17:03:12 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-29 17:03:12 userController - Verificación de usuario  Email luis@luis.es
+2024-12-29 17:03:16 checkUsers - Listado de usuarios mostrado
+2024-12-29 17:03:16 viewUsersList - Lista de usuarios 
+2024-12-29 17:04:02 checkUsers - Listado de usuarios mostrado
+2024-12-29 17:04:02 viewUsersList - Lista de usuarios 
+2024-12-29 17:04:03 checkUsers - Listado de usuarios mostrado
+2024-12-29 17:04:03 viewUsersList - Lista de usuarios 
+2024-12-29 17:04:38 checkUsers - Listado de usuarios mostrado
+2024-12-29 17:04:38 viewUsersList - Lista de usuarios 
+2024-12-29 17:04:40 checkUsers - Listado de usuarios mostrado
+2024-12-29 17:04:40 viewUsersList - Lista de usuarios 
+2024-12-29 17:06:33 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-29 17:06:33 userController - Verificación de usuario  Email luis@luis.es
+2024-12-29 17:06:38 checkUsers - Listado de usuarios mostrado
+2024-12-29 17:06:38 viewUsersList - Lista de usuarios 
+2024-12-29 17:09:03 checkUsers - Listado de usuarios mostrado
+2024-12-29 17:09:03 viewUsersList - Lista de usuarios 
+2024-12-29 17:09:04 checkUsers - Listado de usuarios mostrado
+2024-12-29 17:09:04 viewUsersList - Lista de usuarios 
+2024-12-29 17:09:13 checkUsers - Listado de usuarios mostrado
+2024-12-29 17:09:13 viewUsersList - Lista de usuarios 
+2024-12-29 17:09:13 checkUsers - Listado de usuarios mostrado
+2024-12-29 17:09:13 viewUsersList - Lista de usuarios 
+2024-12-29 17:09:14 checkUsers - Listado de usuarios mostrado
+2024-12-29 17:09:14 viewUsersList - Lista de usuarios 
+2024-12-29 17:09:28 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-29 17:09:28 userController - Verificación de usuario  Email luis@luis.es
+2024-12-29 19:30:53 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-29 19:30:53 userController - Verificación de usuario  Email luis@luis.es
+2024-12-29 19:39:21 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-29 19:39:21 userController - Verificación de usuario  Email luis@luis.es
+2024-12-29 19:42:43 checkUsers - Listado de usuarios mostrado
+2024-12-29 19:42:43 viewUsersList - Lista de usuarios 
+2024-12-29 20:34:17 checkUsers - Usuario: Eva Rol: usuarioBusca Email: eva@eva.com
+2024-12-29 20:34:17 userController - Verificación de usuario  Email eva@eva.com
+2024-12-30 18:09:51 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-30 18:09:51 userController - Verificación de usuario  Email luis@luis.es
+2024-12-30 19:22:25 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-30 19:22:25 userController - Verificación de usuario  Email luis@luis.es
+2024-12-30 19:22:33 checkUsers - Listado de usuarios mostrado
+2024-12-30 19:22:33 viewUsersList - Lista de usuarios 
+2024-12-30 19:22:49 checkUsers - Usuario: Eva Rol: usuarioBusca Email: eva@eva.com
+2024-12-30 19:22:49 userController - Verificación de usuario  Email eva@eva.com
+2024-12-30 20:35:51 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-30 20:35:51 userController - Verificación de usuario  Email luis@luis.es
+2024-12-30 20:37:48 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-30 20:37:48 userController - Verificación de usuario  Email luis@luis.es
+2024-12-31 13:47:32 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-31 13:47:32 userController - Verificación de usuario  Email luis@luis.es
+2024-12-31 14:13:45 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-31 14:13:45 userController - Verificación de usuario  Email luis@luis.es
+2024-12-31 17:07:10 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2024-12-31 17:07:10 userController - Verificación de usuario  Email luis@luis.es
+2025-01-01 12:05:59 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-01 12:05:59 userController - Verificación de usuario  Email luis@luis.es
+2025-01-01 18:33:06 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-01 18:33:06 userController - Verificación de usuario  Email luis@luis.es
+2025-01-01 18:49:39 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-01 18:49:39 userController - Verificación de usuario  Email luis@luis.es
+2025-01-01 20:07:33 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-01 20:07:33 userController - Verificación de usuario  Email luis@luis.es
+2025-01-01 20:15:27 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-01 20:15:27 userController - Verificación de usuario  Email luis@luis.es
+2025-01-01 20:25:55 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-01 20:25:55 userController - Verificación de usuario  Email luis@luis.es
+2025-01-02 13:44:55 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-02 13:44:55 userController - Verificación de usuario  Email luis@luis.es
+2025-01-02 15:51:29 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-02 15:51:29 userController - Verificación de usuario  Email luis@luis.es
+2025-01-02 16:00:42 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-02 16:00:42 userController - Verificación de usuario  Email luis@luis.es
+2025-01-02 19:56:13 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-02 19:56:13 userController - Verificación de usuario  Email luis@luis.es
+2025-01-03 10:31:11 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-03 10:31:11 userController - Verificación de usuario  Email luis@luis.es
+2025-01-03 11:36:25 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-03 11:36:25 userController - Verificación de usuario  Email luis@luis.es
+2025-01-03 13:36:43 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-03 13:36:43 userController - Verificación de usuario  Email luis@luis.es
+2025-01-03 14:11:00 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-03 14:11:00 userController - Verificación de usuario  Email luis@luis.es
+2025-01-03 14:14:07 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-03 14:14:07 userController - Verificación de usuario  Email luis@luis.es
+2025-01-03 14:27:42 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-03 14:27:42 userController - Verificación de usuario  Email luis@luis.es
+2025-01-03 14:36:07 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-03 14:36:07 userController - Verificación de usuario  Email luis@luis.es
+2025-01-03 14:37:30 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-03 14:37:30 userController - Verificación de usuario  Email luis@luis.es
+2025-01-03 14:38:22 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-03 14:38:22 userController - Verificación de usuario  Email luis@luis.es
+2025-01-03 14:39:04 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-03 14:39:04 userController - Verificación de usuario  Email luis@luis.es
+2025-01-03 14:39:38 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-03 14:39:38 userController - Verificación de usuario  Email luis@luis.es
+2025-01-03 16:36:04 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-03 16:36:04 userController - Verificación de usuario  Email luis@luis.es
+2025-01-03 17:28:23 checkUsers - Listado de usuarios mostrado
+2025-01-03 17:28:23 viewUsersList - Lista de usuarios 
+2025-01-03 17:32:21 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-03 17:32:21 userController - Verificación de usuario  Email luis@luis.es
+2025-01-03 17:36:55 checkUsers - Listado de usuarios mostrado
+2025-01-03 17:36:55 viewUsersList - Lista de usuarios 
+2025-01-03 17:37:07 checkUsers - Usuario: Eva Rol: usuarioBusca Email: eva@eva.com
+2025-01-03 17:37:07 userController - Verificación de usuario  Email eva@eva.com
