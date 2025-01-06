@@ -1,15 +1,20 @@
 -Servicios del hogar
-    Fontanería
+    Limpieza del hogar
+    Jardinería
+    Cerrajería
+	Planchar ropa/colada
+	Hacer la compra
+
+-Reparaciones
+	General/todo
+	Fontanería
     Electricidad
     Pintura y decoración
     Carpintería
-    Reparación de electrodomésticos
-    Limpieza del hogar
-    Albañilería
-    Jardinería
-    Reparación de calefacción y aire acondicionado
-    Cerrajería
-
+	Albañilería
+	Reparación de calefacción y aire acondicionado
+	Montaje de muebles
+	
 -Cuidado personal
     Cuidado de niños (niñeras)
     Cuidado de personas mayores o dependientes
@@ -41,4 +46,5 @@
     Reparto a domicilio (mensajería local)
     Costura y arreglo de ropa
     Asistencia informática (reparación y mantenimiento de ordenadores)
+	Reparación de electrodomésticos
     Redacción y traducción de documentos

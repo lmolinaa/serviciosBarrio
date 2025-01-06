@@ -20,4 +20,5 @@ class Acciones {
         $cpCity = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $cpCity;
     }
+
 }

@@ -107,8 +107,8 @@ function enviarCodigoPostal(codigoPostal) {
     }
 })();
 
-function changeCity() {
-    const selectedCity = document.getElementById('municipios').value;
+function changeCity(idMunicipio) {
+    const selectedCity = document.getElementById(idMunicipio).value;
     const url = '/marketplace/app/controllers/actionsController.php';
 
     fetch(url, {

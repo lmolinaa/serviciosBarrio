@@ -134,3 +134,17 @@ nav .menu > .dropdown .submenu li a:hover {
     background-color: #162640;
     color: white;
 }
+
+.centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.derecha {
+    display: flex;
+    justify-content: flex-end;
+    align-items: right;
+    text-align: right;
+}
