@@ -80,7 +80,7 @@ class UserController {
         $logMessage = date('Y-m-d H:i:s') . " userController - Verificación de usuario " . $nombre . " Email " . $email . "\n";
         file_put_contents($logFile, $logMessage, FILE_APPEND);
         
-        echo json_encode(['success' => true, 'redirect' => '/marketplace/app/views/actions/dashboard.php']);
+        echo json_encode(['success' => true, 'redirect' => '/marketplace/app/views/actions/buscoOfrezco.php']);
         exit();
         /*header("Location: ../views/actions/acceso.php");
         exit();*/

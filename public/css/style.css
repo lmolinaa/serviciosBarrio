@@ -137,6 +137,7 @@ h1, h2 {
     max-width: 80%; /* Ajustar ancho máximo para centrarlo */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease-in-out; /* Mover la transición aquí para evitar repetición */
 }
 
 h1 {
@@ -144,12 +145,14 @@ h1 {
     font-size: 2.5em;
     text-transform: uppercase;
     letter-spacing: 2px;
+    white-space: nowrap; /* Evita los saltos de línea */
 }
 
 h2 {
     border: 2px dashed #AEB3F9;
     font-size: 2em;
     text-transform: capitalize;
+    white-space: nowrap; /* Evita los saltos de línea */
 }
 
 h1:hover, h2:hover {
@@ -157,7 +160,12 @@ h1:hover, h2:hover {
     color: #1ABC9C;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     transform: scale(1.05); /* Efecto sutil de aumento */
-    transition: all 0.3s ease-in-out;
+}
+
+/* Quitar la decoración de los enlaces dentro de h1 y h2 */
+h1 a, h2 a {
+    text-decoration: none;
+    color: inherit; /* Mantener el color del texto del encabezado */
 }
 
 .botonDeco {
@@ -223,4 +231,18 @@ input[readonly] {
     font-size: 0.9em;
     color: #6c757d;
     text-align: right;
+}
+
+/* Alinear el contenido a la derecha */
+.align-right {
+    text-align: right; 
+}
+
+.align-right a {
+    text-decoration: none;
+    color: #34495E;
+}
+.align-right a:hover {
+    color: #1ABC9C;
+    text-decoration: underline;
 }

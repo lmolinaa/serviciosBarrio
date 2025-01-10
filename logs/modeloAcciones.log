@@ -1,0 +1,35 @@
+2025-01-10 13:49:05 Consulta fallida: SELECT * 
+                        FROM usuario_ofrece 
+                        WHERE municipio COLLATE utf8_general_ci LIKE :buscarPalabras 
+                            OR servicio COLLATE utf8_general_ci LIKE :buscarPalabras 
+                            OR categoria COLLATE utf8_general_ci LIKE :buscarPalabras 
+                            OR detalle COLLATE utf8_general_ci LIKE :buscarPalabras 
+                            OR precio COLLATE utf8_general_ci LIKE :buscarPalabras - Params: {"palabras buscadas":"Alco"} - Error: SQLSTATE[42000]: Syntax error or access violation: 1253 COLLATION 'utf8_general_ci' is not valid for CHARACTER SET 'latin1'
+2025-01-10 14:12:40 Consulta fallida: SELECT * 
+                        FROM usuario_ofrece 
+                        WHERE municipio COLLATE utf8_general_ci LIKE :buscarPalabras 
+                            OR servicio COLLATE utf8_general_ci LIKE :buscarPalabras 
+                            OR categoria COLLATE utf8_general_ci LIKE :buscarPalabras 
+                            OR detalle COLLATE utf8_general_ci LIKE :buscarPalabras 
+                            OR precio COLLATE utf8_general_ci LIKE :buscarPalabras - Params: {"palabras buscadas":"Alco"} - Error: SQLSTATE[42000]: Syntax error or access violation: 1253 COLLATION 'utf8_general_ci' is not valid for CHARACTER SET 'latin1'
+2025-01-10 14:15:04 Consulta fallida: SELECT * 
+                        FROM usuario_ofrece 
+                        WHERE municipio COLLATE utf8_general_ci LIKE :buscarPalabras 
+                            OR servicio COLLATE utf8_general_ci LIKE :buscarPalabras 
+                            OR categoria COLLATE utf8_general_ci LIKE :buscarPalabras 
+                            OR detalle COLLATE utf8_general_ci LIKE :buscarPalabras 
+                            OR precio COLLATE utf8_general_ci LIKE :buscarPalabras - Params: {"palabras buscadas":"Alco"} - Error: SQLSTATE[42000]: Syntax error or access violation: 1253 COLLATION 'utf8_general_ci' is not valid for CHARACTER SET 'latin1'
+2025-01-10 14:16:14 Consulta fallida: SELECT * 
+                        FROM usuario_ofrece 
+                        WHERE municipio COLLATE utf8_general_ci LIKE :buscarPalabras 
+                            OR servicio COLLATE utf8_general_ci LIKE :buscarPalabras 
+                            OR categoria COLLATE utf8_general_ci LIKE :buscarPalabras 
+                            OR detalle COLLATE utf8_general_ci LIKE :buscarPalabras 
+                            OR precio COLLATE utf8_general_ci LIKE :buscarPalabras - Params: {"palabras buscadas":"Alco"} - Error: SQLSTATE[42000]: Syntax error or access violation: 1253 COLLATION 'utf8_general_ci' is not valid for CHARACTER SET 'latin1'
+2025-01-10 14:23:31 Consulta fallida: SELECT * 
+                        FROM usuario_ofrece 
+                        WHERE municipio COLLATE utf8_general_ci LIKE :buscarPalabras 
+                            OR servicio COLLATE utf8_general_ci LIKE :buscarPalabras 
+                            OR categoria COLLATE utf8_general_ci LIKE :buscarPalabras 
+                            OR detalle COLLATE utf8_general_ci LIKE :buscarPalabras 
+                            OR precio COLLATE utf8_general_ci LIKE :buscarPalabras - Params: {"palabras buscadas":"Madrid"} - Error: SQLSTATE[42000]: Syntax error or access violation: 1253 COLLATION 'utf8_general_ci' is not valid for CHARACTER SET 'latin1'

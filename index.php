@@ -10,7 +10,14 @@
     <link rel="stylesheet" href="./public/css/imagenLandingPage.css">
     <link rel="stylesheet" href="./public/css/pie.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+    <script type="text/javascript">
+        function buscarPalabras() {
+            const buscarPalabras = document.getElementById("buscarPalabras").value;
+            window.location.href = './app/controllers/actionsController.php?buscarPalabras=' + buscarPalabras;
+
+        }
+    </script>
+
 </head>
 <body>
     <?php
@@ -20,8 +27,8 @@
     <!-- Imagen con buscador -->
 <div class="hero">
         <div class="search-container">
-            <input type="text" placeholder="Busca servicios...">
-            <button><img width="24px" height="24" src='/marketplace/public/img/iconos/search-outline.svg'></button>
+            <input type="text" id="buscarPalabras" name="buscarPalabras" placeholder="Busca servicios...">
+            <button onclick="javascript:buscarPalabras()"><img width="24px" height="24" src='/marketplace/public/img/iconos/search-outline.svg'></button>
         </div>
     </div>
 
@@ -96,7 +103,6 @@
     <!-- Incluir JS de Bootstrap y sus dependencias -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
 </body>
 </html>

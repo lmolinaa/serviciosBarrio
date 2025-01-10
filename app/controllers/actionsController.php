@@ -65,7 +65,7 @@ class ActionController {
     }
 
     //Usamos esta función para sacar el detalle del usuario que ofrece un servicio
-    public static function consultaCardsDetalle($id_usuario, $servicioSeleccionado, $categoriaSeleccionada){
+    public static function consultaCardsDetalle($id_usuario, $servicioSeleccionado, $categoriaSeleccionada, $isUbicacion){
         // Iniciar la sesión si no está iniciada
         if (session_status() == PHP_SESSION_NONE) {
             session_start();
@@ -79,9 +79,27 @@ class ActionController {
        /* Guardamos los datos en la sesión por seguridad y porque son muchos datos los que van a viajar
         a otra php distinta de la que le ha llamado al controller*/
         $_SESSION['detalleByCard'] = $detalleByCard;
+        $_SESSION['isUbicacion'] = $isUbicacion;
 
         // Redirige a la página destino
         header("Location: /marketplace/app/views/actions/detalleServicio.php");
+        exit();  
+    }
+
+    public static function busarPalabrasIndex($buscarPalabras){
+         // Iniciar la sesión si no está iniciada
+         if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+        
+        //Instanciamos la clase Acciones del modeloAcciones.php para poder llamar a sus métodos
+        $modeloAcciones = new Acciones();
+        $buscarPalabrasByCards = $modeloAcciones->getBuscarPalabrasByCards($buscarPalabras);
+        
+        //Metemos en la session todo lo que nos venga de la búsqueda (es más seguro)
+        $_SESSION['buscarPalabrasByCards'] = $buscarPalabrasByCards;
+        //Redirige a la página destino
+        header("Location: /marketplace/app/views/actions/buscarServiciosCards.php");
         exit();  
     }
 }
@@ -105,8 +123,11 @@ class ActionController {
             $id_usuario = $_GET['id_usuario'];
             $servicioSeleccionado = $_GET['servicio'];
             $categoriaSeleccionada = $_GET['categoria'];
-            ActionController::consultaCardsDetalle($id_usuario, $servicioSeleccionado, $categoriaSeleccionada);
-        
+            $isUbicacion = $_GET['isUbicacion'];
+            ActionController::consultaCardsDetalle($id_usuario, $servicioSeleccionado, $categoriaSeleccionada, $isUbicacion);
+        } else if (isset($_GET['buscarPalabras'])) {
+            $buscarPalabras = $_GET['buscarPalabras'];
+            ActionController::busarPalabrasIndex($buscarPalabras);
         }
     }
 ?>

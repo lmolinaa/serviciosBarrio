@@ -4,15 +4,27 @@
     $permisosEdit = checkAccess('login');
     if (isset($_SESSION['detalleByCard'])) {
         $detalleByCard = $_SESSION['detalleByCard'];
+        $isUbicacion = $_SESSION['isUbicacion'];
     } 
 ?>
     <link rel="stylesheet" href="/marketplace/public/css/detalleOfreceStyle.css">
    
-    <div class="container">
     <?php foreach ($detalleByCard as $card): 
         $date = new DateTime($card['fecha']);
     ?>
-        <h2><?= htmlspecialchars($card['categoria']) ?> / <?= htmlspecialchars($card['servicio']) ?></h2>
+        <h2>
+            <?php
+            //Controlamos adonde debe volver, si es por ubicación o por categoría/servicio
+                if ($isUbicacion === "false"){
+            ?>
+            <a href="./serviciosCards.php?servicio=<?= htmlspecialchars($card['servicio']) ?>&categoria=<?= htmlspecialchars($card['categoria']) ?>">    
+            <?php } else { ?>
+                <a href="./serviciosCards.php?municipio=<?= htmlspecialchars($card['municipio']) ?>">
+            <?php } ?>    
+            <img class="iconoMenu" src='/marketplace/public/img/iconos/play-skip-back-outline.svg' data-bs-toggle="tooltipAll" data-bs-placement="top" title='Volver a la pantalla anterior.'>
+            <?= htmlspecialchars($card['categoria']) ?> / <?= htmlspecialchars($card['servicio']) ?></a>
+        </h2>
+    <div class="container">
         <div class="card">
             <img class= 'card-img' src="<?= htmlspecialchars($card['imagen']) ?>" alt="Imagen de <?= htmlspecialchars($card['titulo']) ?>">
             <div class="card-contact">
@@ -37,19 +49,12 @@
                     <img class="iconoSubmenu" src='/marketplace/public/img/iconos/cash-outline.svg'>
                     <strong>Precio aproximado:</strong> <?= htmlspecialchars($card['precio']) ?> €<br>
                 </div> <br><br>
-                <div class="volver">
-                <a href="./serviciosCards.php?servicio=<?= htmlspecialchars($card['servicio']) ?>&categoria=<?= htmlspecialchars($card['categoria']) ?>">    
-                    <img class="iconoMenu" src='/marketplace/public/img/iconos/play-skip-back-outline.svg' data-bs-toggle="tooltipAll" data-bs-placement="top" title='Volver a la pantalla anterior.'>
-                </a>    
-            </div>
             </div>
         </div>
-    <?php endforeach; ?>
-    
-
     </div>
-    
-      <!-- Modal de inicio de sesión -->
+    <?php endforeach; ?>
+
+<!-- Modal de inicio de sesión -->
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">

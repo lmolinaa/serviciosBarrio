@@ -74,7 +74,6 @@ class Acciones {
             file_put_contents($logFile, $logMessage, FILE_APPEND);
             return false;
         }
-
     }
 
     public function getDetalleByCard($id_usuario, $servicioSeleccionado, $categoriaSeleccionada){
@@ -96,14 +95,37 @@ class Acciones {
         try{
             $stmt->execute();
             $detalleByCard = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            /*$logMessage = date('Y-m-d H:i:s') . " Consulta fallida: " . $query . "\n" . "id Usuarios: " . $id_usuario . " Servicio: " .  $servicioSeleccionado . " Categoria: " . $categoriaSeleccionada . "\n";
-            file_put_contents($logFile, $logMessage, FILE_APPEND);*/
             return $detalleByCard;
         } catch (PDOException $e){
             $logMessage = date('Y-m-d H:i:s') . " Consulta fallida: " . $query . "\n";
             file_put_contents($logFile, $logMessage, FILE_APPEND);
             return false;
         }
-    }  
-
+    } 
+    
+    public function getBuscarPalabrasByCards($buscarPalabras){
+        $logFile = __DIR__ . '/../../logs/modeloAcciones.log';
+        $db = Database::connect();
+        $query = "SELECT * 
+                        FROM usuario_ofrece 
+                        WHERE municipio LIKE :buscarPalabras 
+                            OR servicio LIKE :buscarPalabras 
+                            OR categoria LIKE :buscarPalabras 
+                            OR detalle LIKE :buscarPalabras 
+                            OR precio LIKE :buscarPalabras";
+        $stmt = $db->prepare($query);
+        $cualquieraBuscarPalabras = '%' . $buscarPalabras . '%';
+        $stmt->bindParam(':buscarPalabras', $cualquieraBuscarPalabras, PDO::PARAM_STR);
+       
+        try {
+            $stmt->execute();
+            $buscarPalabrasByCards = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $buscarPalabrasByCards;
+        } catch (PDOException $e) {
+            // Registrar la consulta y los parámetros en el log si hay error
+            $logMessage = date('Y-m-d H:i:s') . " Consulta fallida: " . $query . " - Params: " . json_encode(['palabras buscadas' => $buscarPalabras]) . " - Error: " . $e->getMessage() . "\n";
+            file_put_contents($logFile, $logMessage, FILE_APPEND);
+            return false;
+        }
+    }
 }
