@@ -50,7 +50,7 @@ try {
     // Insertar en la tabla usuario_ofrece si el id_rol es 2
     if ($id_rol == 2) {
         $queryUsuarioOfrece = "INSERT INTO usuario_ofrece (id_usuario, categoria, servicio, titulo, detalle, imagen, fecha, precio, municipio) 
-                               VALUES (:id_usuario, :categoria, :servicio, :titulo, :detalle, :imagen, :fecha, :precio, :municipioOfrece)";
+                               VALUES (:id_usuario, :categoria, :servicio, :titulo, :detalle, :imagen, :fecha, :precio, :serviceMunicipio)";
         $stmtUsuarioOfrece = $db->prepare($queryUsuarioOfrece);
         $stmtUsuarioOfrece->execute([
             ':id_usuario' => $usuario_id,
@@ -61,7 +61,7 @@ try {
             ':imagen' => $relativePathImg,
             ':fecha' => $fecha,
             ':precio' => $precio,
-            ':municipioOfrece' => $municipioOfrece,
+            ':serviceMunicipio' => $serviceMunicipio,
         ]);
     }
 
@@ -79,18 +79,6 @@ try {
 
         loginUser($usuarioNuevo['nombre'], $usuarioNuevo['nombre_rol'], $usuarioNuevo['email']);
     }
-
-    //Si llegamos aquí sin error, cargamos la imagen en el servidor
-   /* $uploadDir = '/marketplace/public/files/images/';
-    $uploadFile = $uploadDir . basename($_FILES['imagen']['name']);
-
-    if (move_uploaded_file($_FILES['imagen']['tmp_name'], $uploadFile)) {
-        // Guardar la ruta en la base de datos
-        // $db->query("INSERT INTO imagenes (ruta) VALUES ('$uploadFile')");
-        echo "Imagen subida con éxito: $uploadFile";
-    } else {
-        echo "Error al subir la imagen.";
-    }*/
      
     //Confirmar la transacción, solo si ocurre si todo va bien
      $db->commit();

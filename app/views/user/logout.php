@@ -13,6 +13,15 @@
         $mensaje = 'La sesión ha caducado, por favor, vuelva a hacer el login.';
     }
     ?>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: rgb(210, 225, 236);
+        margin: 0;
+        padding: 0;
+        text-align: justify;
+    }
+</style>
 <div class="container mt-5 text-center">
         <div class="alert alert-warning">
             <strong><?php echo $mensaje ?></strong>

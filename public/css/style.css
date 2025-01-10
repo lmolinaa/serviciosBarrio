@@ -170,7 +170,7 @@ h1:hover, h2:hover {
     text-decoration: none; /* Sin subrayado */
     display: inline-block; /* Mostrar en línea */
     font-size: 16px; /* Tamaño de la fuente */
-    margin: 20px 2px; /* Margen */
+    margin: 15px 0 15px 0; /* Margen */
     cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
     transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
 }
@@ -178,6 +178,26 @@ h1:hover, h2:hover {
 .botonDeco:hover {
     background-color: #45a049; /* Color de fondo al pasar el cursor */
 }
+
+.botonDecoMin {
+    background-color: #162640; /* Color de fondo */
+    border: none; /* Sin borde */
+    border-radius: 3px; /* Borde redondeado */
+    color: white; /* Color del texto */
+    padding: 10px 18px; /* Relleno */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Mostrar en línea */
+    font-size: 14px; /* Tamaño de la fuente */
+    margin: 5px 0 5px 0; /* Margen */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+}
+
+.botonDecoMin:hover {
+    background-color: #45a049; /* Color de fondo al pasar el cursor */
+}
+
 
 /* Estilo para los campos readonly */
 input[readonly] {

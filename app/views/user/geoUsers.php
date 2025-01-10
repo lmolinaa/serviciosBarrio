@@ -28,6 +28,7 @@ $municipios = $actionController->consultaMunicipios();
             <!-- Información del usuario -->
             <div class="col-md-6">
                 <div class="info">
+                <img class="iconoSubmenu" src='/marketplace/public/img/iconos/earth-outline.svg'>
                     <strong>Ubicación del Usuario Detectada:</strong>
                     <div id="postalCode">
                         <strong>Código Postal:</strong> <span>No disponible</span>
@@ -62,11 +63,13 @@ $municipios = $actionController->consultaMunicipios();
                         <select id="resultadoCP" name="resultadoCP" class="form-select"></select>
                     </div>
                     <div class="mt-3 centro">
-                        <a href="javascript:getSelectedValue()">
-                            <img class='iconoMenu centro' src="/marketplace/public/img/iconos/earth.svg" 
-                                data-bs-toggle="tooltipAll" data-bs-placement="top" title="Pulsa para ver ubicación en el mapa.">
-                        </a>
+                        <div class="centrarB">
+                        <button class='botonDecoMin' id="ir" onclick="javascript:getSelectedValue()">
+                            Ir
+                        </button>
+                        </div>
                     </div>
+                    <div class="mensajeAlerta"></div>
                 </div>
             </div>
         </div>

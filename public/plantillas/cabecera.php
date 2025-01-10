@@ -17,7 +17,8 @@
 <?php
 include_once __DIR__ . '/../../app/config/session.php';
 
-//Usamos el json para iterar las categorías y mostrarlas en el menú
+/*Usamos el json para iterar las categorías y mostrarlas en el menú
+Lo ponemos en la cabecera para que esté disponible en toda la web*/
 $jsonFile = __DIR__ . '/../files/servicios.json';
 
 // Leer y decodificar el JSON
@@ -40,7 +41,7 @@ if (isset($_SESSION['email']) ?? '') {
 <!-- Cabecera -->
 <header>
     <img src="/marketplace/public/img/logotipo-sinFondo.png" alt="MarketPlace Logo">
-    <h3><strong>tu plataforma de servicios</strong></h3>
+    <h3><strong><i>Bringing people together</i></strong></h3>
 <nav>
     <ul class="menu">
         <li class="tab"><a href="/marketplace"><img class="iconoMenu" src='/marketplace/public/img/iconos/home-outline.svg'> Home</a></li>
@@ -54,13 +55,13 @@ if (isset($_SESSION['email']) ?? '') {
                             // Generar el enlace con urlencode
                             $categoriaUrl = urlencode($categoria);
                             $categoriaTexto = ucfirst(str_replace("_", " ", htmlspecialchars($categoria)));
-                            echo "<li><a href=\"/marketplace/app/views/actions/buscoOfrezco.php?categoria=$categoriaUrl\"><img class='iconoSubmenu' src='/marketplace/public/img/iconos/build-outline.svg'>$categoriaTexto</a></li>";
+                            echo "<li><a href=\"/marketplace/app/views/actions/buscoOfrezco.php?categoria=$categoriaUrl\"><img class='iconoSubmenu' src='/marketplace/public/img/iconos/checkmark-circle-outline.svg'>$categoriaTexto</a></li>";
                         }
                     }
                 ?>               
             </ul>
         </li>
-        <li class="tab"><a href="/marketplace/app/views/actions/formAbout.php"><img class="iconoMenu" src='/marketplace/public/img/iconos/information-circle-outline.svg'>Acerca de</a></li>
+        <li class="tab"><a href="/marketplace/app/views/actions/aboutOf.php"><img class="iconoMenu" src='/marketplace/public/img/iconos/information-circle-outline.svg'>Acerca de</a></li>
         <li class="dropdown">
         <?php
         if (!$usuarioS){    

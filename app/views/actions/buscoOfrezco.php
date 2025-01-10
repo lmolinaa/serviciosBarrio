@@ -3,13 +3,17 @@
     include '../../../public/plantillas/cabecera.php'; // Incluir el archivo cabecera.php
 
     //llamo a la checkAccess para controlar lo que puede ver el usuario en función del rol
-   $permisos = checkAccess('edit_content'); // Verificar los permisos del usuario
+   //$permisos = checkAccess('edit_content'); // Verificar los permisos del usuario
 
  //Verificar si el parámetro 'categoria' está presente en la URL (ocurre cuando es llamado desde el menú superior)
  $categoria = ""; //Si get es '' el listado permanece cerrado
  if (isset($_GET['categoria'])) {
     $categoria = trim(urldecode($_GET['categoria'])); // Decodificar el valor
     $categoria = str_replace('_', ' ', $categoria); // Reemplazar guiones bajos por espacios
+}
+$permisos = '';
+if (isset($_SESSION['rol']) == "administrador") {
+    $permisos = $_SESSION['rol'];
 }
 
     if ($servicios) {
@@ -18,31 +22,32 @@
         echo '<div class="accordion-container">';
     
         foreach ($servicios as $nombreCategoria => $listaServicios) {
-            // Validar que la categoría sea un string
+            //Validar que la categoría sea un string
             if (is_string($nombreCategoria)) {
-            // Procesar el nombre de la categoría para comparación (como en el menú)
+            //Mostramos el nombre de la categoría
             $categoriaProcesada = ucfirst(str_replace("_", " ", htmlspecialchars($nombreCategoria)));
+            
 
             // Comparar con el valor de la categoría recibida por GET
             $isOpen = (strcasecmp($categoria, $categoriaProcesada) === 0) ? ' open' : '';
 
             echo '<details' . $isOpen . '>'; // Añadir el atributo open si coincide
-            echo '<summary>' . ucfirst(str_replace('_', ' ', htmlspecialchars($nombreCategoria))) . '</summary>';
+            echo '<summary>' . ucfirst(str_replace('_', ' ', htmlspecialchars($nombreCategoria))) 
+                . '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><img class="iconoMenu" src="/marketplace/public/img/iconos/add-circle-outline.svg" data-bs-toggle="tooltipAll" data-bs-placement="top" title="Añadir Servicio"></a></summary>';
 
-                // Validar que la lista de servicios sea un array
+                //Validar que la lista de servicios sea un array
                 if (is_array($listaServicios)) {
                     echo '<ul>';
                     foreach ($listaServicios as $servicio) {
-                        // Validar que el servicio sea un string antes de mostrarlo
+                        //Validar que el servicio sea un string antes de mostrarlo
                         if (is_string($servicio)) {
-                            echo '<li><a href="./serviciosCards.php?servicio=' . htmlspecialchars($servicio) . '">' . htmlspecialchars($servicio) . '</a>';
-                            if ($permisos){
+                            echo '<li><a href="./serviciosCards.php?servicio=' . htmlspecialchars($servicio) . '&categoria=' . htmlspecialchars($nombreCategoria) . '">' . htmlspecialchars($servicio) . '</a>';
+                            if ($permisos==="administrador"){
                                 /******************* Está pendiente de desarrollar el edit y el delete ************** */
                                 echo '<a href="/marketplace/app/views/actions/editService.php?categoria=' . urlencode($nombreCategoria) . '&servicio=' . urlencode($servicio) . '"><img width="24px" height="24" src="/marketplace/public/img/iconos/pencil-outline.svg" data-bs-toggle="tooltipAll" data-bs-placement="top" title="Editar"></a>';
                                 echo '<a href="/marketplace/app/views/actions/deleteService.php?categoria=' . urlencode($nombreCategoria) . '&servicio=' . urlencode($servicio) . '"><img width="24px" height="24" src="/marketplace/public/img/iconos/trash-outline.svg" data-bs-toggle="tooltipAll" data-bs-placement="top" title="Eliminar"></a>';
                             }
                             echo '</li>';
-                            
                         } else {
                             echo '<li>Elemento no válido</li>';
                         }
@@ -51,7 +56,6 @@
                 } else {
                     echo '<p>Lista de servicios no válida</p>';
                 }
-    
                 echo '</details>';
             }
         }

@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: rgb(210, 225, 236);
+        margin: 0;
+        padding: 0;
+        text-align: justify;
+    }
+</style>
+
 </head>
 <body>
     <div class="container mt-5">
-        <!--<form action="/marketplace/app/controllers/userController.php" method="POST" class="needs-validation" novalidate>-->
         <div id="error-message" class="alert alert-danger d-none"></div>    
         <form id="loginForm">
         <div class="mb-3">
@@ -18,8 +28,10 @@
             <label for="password" class="form-label">Contraseña</label>
             <input type="password" class="form-control" id="password" name="password" required>
         </div>
+        <h6><a href="#">¿Has olvidado tu contraseña?</a></h6>
         <input type="hidden" name="action" value="checkUserExists">
         <button type="submit" class='botonDeco'>Iniciar Sesión</button>
+        
         </form>
     </div>
 

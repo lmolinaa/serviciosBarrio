@@ -24,7 +24,7 @@ class UserController {
         $detalle = $_POST['detalle'] ?? ''; 
         $file = $_POST['file'] ?? '';  
         $precio = $_POST['precio'] ?? ''; 
-        $serviceOfrece = $_POST['serviceMunicipio'] ?? ''; 
+        $serviceMunicipio = $_POST['serviceMunicipio'] ?? ''; 
         $imagen = $_POST['imagen'] ?? ''; 
         $relativePathImg = "";
 

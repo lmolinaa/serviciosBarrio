@@ -42,18 +42,34 @@ function getSelectedValue() {
 
                 console.log('Latitud:', latModificada, 'Longitud:', lonModificada);
 
-                // Actualizar el mapa y el marcador
+                //Actualizar el mapa y el marcador
                 map.setView([latModificada, lonModificada], 16);
                 updateMarker(latModificada, lonModificada, data[0].display_name, selectedCP);
 
             } else {
                 console.error('No se encontraron resultados para el código postal:', selectedCP);
+                //Creamos un elemento para mostrar el mensaje de error por pantalla
+                const errorMessage = document.createElement('div');
+                errorMessage.textContent = 'No se encontraron resultados para el código postal: ' + selectedCP;
+                errorMessage.style.color = 'red';
+                errorMessage.style.marginTop = '8px';
+
+                //Añadir el mensaje de error al DOM
+                const alerta = document.querySelector('.mensajeAlerta'); 
+                alerta.appendChild(errorMessage);
+
+                //Añadir evento para borrar el mensaje al interactuar con la pantalla
+                document.addEventListener('click', function removeErrorMessage() {
+                    errorMessage.remove();
+                    document.removeEventListener('click', removeErrorMessage);
+                });
+
             }
         })
         .catch(error => console.error('Error al consultar Nominatim:', error));
 }
 
-// Función para enviar el código postal a userController.php
+//Función para enviar el código postal a userController.php
 function enviarCodigoPostal(codigoPostal) {
     const xhr = new XMLHttpRequest();
     xhr.open('POST', '/marketplace/app/controllers/actionsController.php', true);
@@ -142,4 +158,10 @@ function changeCity(idMunicipio) {
             }
         })
         .catch((error) => console.error('Error:', error));
+}
+
+function buscoOfrezcoUbicacion(){
+    const porMunicipio = document.getElementById("municipios").value;
+    window.location.href = '/marketplace/app/views/actions/serviciosCards.php?municipio=' + porMunicipio;
+
 }

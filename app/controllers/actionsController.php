@@ -43,6 +43,47 @@ class ActionController {
        echo json_encode(['success' => true, 'codigosPostales' => $cpCity]);
        exit();
    }
+
+   //Usamos esta función para sacar los datos de las cards
+    public function consultaCards($servicioSeleccionado, $categoriaSeleccionada){
+        //Instanciamos la clase Acciones del modeloAcciones.php para poder llamar a sus métodos
+        $modeloAcciones = new Acciones();
+       
+        //consultamos el método getDatosCards para pintar los datos básicos del servicio seleccionado
+       $cardsByServicio = $modeloAcciones->getCardsByServicio($servicioSeleccionado, $categoriaSeleccionada);
+       return $cardsByServicio;  
+    }
+     
+    public function consultaCardsByMunicipio($municipio){
+        //Instanciamos la clase Acciones del modeloAcciones.php para poder llamar a sus métodos
+        $modeloAcciones = new Acciones();
+
+        //consultamos el método getDatosCards para pintar los datos básicos del servicio seleccionado
+        $cardsByMunicipio = $modeloAcciones->getCardsByMunicipio($municipio);
+        
+        return $cardsByMunicipio;
+    }
+
+    //Usamos esta función para sacar el detalle del usuario que ofrece un servicio
+    public static function consultaCardsDetalle($id_usuario, $servicioSeleccionado, $categoriaSeleccionada){
+        // Iniciar la sesión si no está iniciada
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+        //Instanciamos la clase Acciones del modeloAcciones.php para poder llamar a sus métodos
+        $modeloAcciones = new Acciones();
+       
+        //consultamos el método getDetalleByCard para pintar los detalles del usuario
+       $detalleByCard = $modeloAcciones->getDetalleByCard($id_usuario, $servicioSeleccionado, $categoriaSeleccionada);
+        
+       /* Guardamos los datos en la sesión por seguridad y porque son muchos datos los que van a viajar
+        a otra php distinta de la que le ha llamado al controller*/
+        $_SESSION['detalleByCard'] = $detalleByCard;
+
+        // Redirige a la página destino
+        header("Location: /marketplace/app/views/actions/detalleServicio.php");
+        exit();  
+    }
 }
 
 // Manejo de solicitudes
@@ -60,6 +101,12 @@ class ActionController {
             $selectedCity = $_GET['city'];
             // Llamar a la función para manejar la ciudad seleccionada
             ActionController::consultaCPbyCity($selectedCity);
-        } 
+        } else if (isset($_GET['id_usuario'])) {
+            $id_usuario = $_GET['id_usuario'];
+            $servicioSeleccionado = $_GET['servicio'];
+            $categoriaSeleccionada = $_GET['categoria'];
+            ActionController::consultaCardsDetalle($id_usuario, $servicioSeleccionado, $categoriaSeleccionada);
+        
+        }
     }
 ?>

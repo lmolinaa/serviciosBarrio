@@ -1,120 +1,85 @@
 <!-- Cabecera -->
+<link rel="stylesheet" href="/marketplace/public/css/cardsStyle.css">
 <?php
     include '../../../public/plantillas/cabecera.php'; // Incluir el archivo cabecera.php
-
-    // Datos simulados de categorías (esto normalmente vendría de una base de datos)
-$categories = [
-    [
-        "image" => "/marketplace/public/img/logotipoOriginal.jpg", // URL de imagen de ejemplo
-        "title" => "Electricidad",
-        "service_type" => "Instalaciones y reparaciones",
-        "providers" => 120,
-        "average_price" => 50
-    ],
-    [
-        "image" => "/marketplace/public/img/logotipoOriginal.jpg",
-        "title" => "Fontanería",
-        "service_type" => "Reparaciones de tuberías",
-        "providers" => 90,
-        "average_price" => 45
-    ],
-    [
-        "image" => "/marketplace/public/img/logotipoOriginal.jpg",
-        "title" => "Pintura",
-        "service_type" => "Pintura de interiores y exteriores",
-        "providers" => 60,
-        "average_price" => 30
-    ],
-    [
-        "image" => "/marketplace/public/img/logotipoOriginal.jpg",
-        "title" => "Jardinería",
-        "service_type" => "Cuidado de jardines",
-        "providers" => 75,
-        "average_price" => 25
-    ]
-];
-?>
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios que se ofrecen</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color:rgb(210, 225, 236);
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .card {
-            background-color: #CFD4FC;
-            border: 1px solid #162640;
-            border-radius: 10px;
-            width: calc(25% - 20px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-        }
-
-        .card img {
-            width: 100%;
-            height: auto;
-        }
-
-        .card-content {
-            padding: 15px;
-        }
-
-        .card-title {
-            font-size: 18px;
-            color: #162640;
-            margin: 10px 0;
-        }
-
-        .card-service {
-            font-size: 14px;
-            color: #555;
-            margin: 5px 0;
-        }
-
-        .card-info {
-            font-size: 14px;
-            color: #333;
-            margin: 5px 0;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <?php foreach ($categories as $category): ?>
-            <div class="card">
-                <img src="<?php echo $category['image']; ?>" alt="<?php echo $category['title']; ?>">
-                <div class="card-content">
-                    <h3 class="card-title"><?php echo $category['title']; ?></h3>
-                    <p class="card-service"><?php echo $category['service_type']; ?></p>
-                    <p class="card-info">Número de proveedores: <?php echo $category['providers']; ?></p>
-                    <p class="card-info">Precio medio: <?php echo $category['average_price']; ?> €</p>
+    include_once __DIR__ . '/../../../app/controllers/actionsController.php';
+    //$municipio = ""; //Si get es '' quiere decir que no se busca por municipio sino por categoría y servicio
+    if (!isset($_GET['municipio']) ?? '') {
+        $servicioSeleccionado = htmlspecialchars_decode($_GET['servicio']) ?? '';
+        $categoriaSeleccionada = htmlspecialchars_decode($_GET['categoria']) ?? '';
+        
+        $actionController = new ActionController();
+        $cardsByServicio = $actionController->consultaCards($servicioSeleccionado, $categoriaSeleccionada);
+    ?>
+        <br>
+        <h2><?php echo $categoriaSeleccionada ?></h2>
+        <div class="container">
+            <?php foreach ($cardsByServicio as $cards): ?>
+                <div class="card">
+                    <a href='/marketplace/app/controllers/actionsController.php?id_usuario=<?php echo $cards["id_usuario"]; ?>&categoria=<?php echo htmlspecialchars($categoriaSeleccionada) ?>&servicio=<?php echo htmlspecialchars($servicioSeleccionado) ?>'>
+                        <img src="<?php echo $cards['imagen']; ?>" data-bs-toggle="tooltipAll" data-bs-placement="top" title="<?php echo $cards['titulo']; ?>">
+                    </a>
+                    <div class="card-content">
+                        <h3 class="card-title"><?php echo $cards['servicio']; ?></h3>
+                        <div class='card-info'>
+                            <img class="iconoSubmenu" src='/marketplace/public/img/iconos/reader-outline.svg'>
+                            <strong>Ofrezco: </strong><?php echo $cards['titulo']; ?><br>
+                            <img class="iconoSubmenu" src='/marketplace/public/img/iconos/earth-outline.svg'>
+                            <strong>Lugar: </strong><?php echo $cards['municipio']; ?><br>
+                            <img class="iconoSubmenu" src='/marketplace/public/img/iconos/cash-outline.svg'>
+                            <strong>Precio apróx.: </strong><?php echo $cards['precio']; ?> €
+                        </div>
+                    </div>
                 </div>
+            <?php endforeach; ?>
+        </div>
+    <?php
+    } else {
+        $municipio = $_GET['municipio'];
+        $actionController = new ActionController();
+        $cardsByMunicipio = $actionController->consultaCardsByMunicipio($municipio);
+    ?>
+        <br>
+        <h2>Categorías / Servicios en <?php echo $municipio ?></h2>
+        <div class="container">
+            <?php foreach ($cardsByMunicipio as $cards): ?>
+                <div class="card">
+                    <a href='/marketplace/app/controllers/actionsController.php?id_usuario=<?php echo $cards["id_usuario"]; ?>&categoria=<?php echo $cards["categoria"]; ?>&servicio=<?php echo $cards["servicio"]; ?>'>
+                        <img src="<?php echo $cards['imagen']; ?>" data-bs-toggle="tooltipAll" data-bs-placement="top" title="<?php echo $cards['titulo']; ?>">
+                    </a>
+                    <div class="card-content">
+                        <h3 class="card-title"><?php echo $cards['servicio']; ?></h3>
+                        <div class='card-info'>
+                            <img class="iconoSubmenu" src='/marketplace/public/img/iconos/reader-outline.svg'>
+                            <strong>Ofrezco: </strong><?php echo $cards['titulo']; ?><br>
+                            <img class="iconoSubmenu" src='/marketplace/public/img/iconos/earth-outline.svg'>
+                            <strong>Lugar: </strong><?php echo $cards['municipio']; ?><br>
+                            <img class="iconoSubmenu" src='/marketplace/public/img/iconos/cash-outline.svg'>
+                            <strong>Precio apróx.: </strong><?php echo $cards['precio']; ?> €
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    <?php } ?>
+
+  <!-- Modal de inicio de sesión -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-        <?php endforeach; ?>
+            <div class="modal-body">
+                <!-- Mensaje de error dinámico -->
+                <?php
+                include '../user/login.php'; // Incluir el archivo login.php
+                ?>
+            </div>
+        </div>
     </div>
-    
+</div>  
     <!-- Pie de página -->
     <footer>
         <p>
@@ -123,7 +88,6 @@ $categories = [
             ?>
         </p>
     </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

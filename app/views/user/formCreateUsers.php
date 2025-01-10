@@ -91,8 +91,14 @@
                 <label for="categoria" class="form-label">Categoría*:</label>
                 <select id="categoria" name="categoria" class="form-select">
                     <option value="">Selecciona una categoría</option>
-                    <option value="1">Reparaciones</option>
-                    <option value="2">Cuidado personal</option>
+                    <?php
+                        // Iterar sobre las categorías
+                        foreach ($servicios as $categoria => $listaServicios) {
+                            if (is_string($categoria)) { 
+                                echo "<option value='$categoria'>$categoria</option>";
+                            }
+                        }
+                    ?>    
                 </select>
                 <span id="categoria_error" class="error-message"></span>
             </div>
@@ -100,8 +106,6 @@
                 <label for="servicio" class="form-label">Tipo servicio*:</label>
                 <select id="servicio" name="servicio" class="form-select">
                     <option value="">Selecciona un servicio</option>
-                    <option value="1">General/todo</option>
-                    <option value="2">Fontanería</option>
                 </select>
                 <span id="servicio_error" class="error-message"></span>
             </div>
@@ -159,7 +163,7 @@
     </form>
 </div>
 
--- Modal de inicio de sesión -->
+<!-- Modal de inicio de sesión -->
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -189,6 +193,13 @@
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="/marketplace/public/js/geolocalizacion.js"></script>
+
+<!-- Sacamos el servicio en base a la categoría -->
+<script>
+    // Convertir el array PHP en una variable JavaScript
+    var servicios = <?php echo json_encode($servicios); ?>;
+</script>
+<script src="/marketplace/public/js/categoria_servicios.js"></script>
 
 </body>
 </html>

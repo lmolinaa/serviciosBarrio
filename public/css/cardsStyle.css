@@ -1,8 +1,8 @@
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color:rgb(19, 139, 224);
+    background-color:rgb(210, 225, 236);
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -15,13 +15,17 @@ body {
 }
 
 .card {
-    background-color: #3447da;
+    background-color: #CFD4FC;
     border: 1px solid #162640;
     border-radius: 10px;
     width: calc(25% - 20px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease;
+    margin-bottom: 75px; /* Añadir margen inferior */
+    display: flex;
+    flex-direction: column;
+    height: 350px; /* Establecer una altura fija */
 }
 
 .card:hover {
@@ -29,28 +33,34 @@ body {
 }
 
 .card img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
+    max-height: 200px; /* Ajustar la altura máxima de la imagen */
+    object-fit: cover; /* Asegurar que la imagen se ajuste al contenedor */
+    flex-shrink: 0;
+    align-self: center; /* Centrar la imagen horizontalmente */
 }
 
 .card-content {
     padding: 15px;
+    flex-grow: 1; /* Permitir que el contenido crezca para llenar el espacio */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinear los elementos al inicio */
+    overflow: hidden; /* Ocultar el desbordamiento */
+    line-height: 1.2; /* Ajustar el interlineado */
 }
 
 .card-title {
     font-size: 18px;
     color: #162640;
-    margin: 10px 0;
-}
-
-.card-service {
-    font-size: 14px;
-    color: #555;
-    margin: 5px 0;
+    margin: 5px 0; /* Reducir el margen para acercar al contenido siguiente */
+    text-align: left;
 }
 
 .card-info {
     font-size: 14px;
     color: #333;
-    margin: 5px 0;
+    margin: 5px 0; /* Reducir el margen para acercar al contenido anterior */
+    text-align: left;
 }

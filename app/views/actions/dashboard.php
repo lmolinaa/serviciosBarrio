@@ -9,7 +9,7 @@
 <script src="/marketplace/public/js/geolocalizacion.js"></script>
 
 <div class="centrarB">
-    <button class='botonDeco' id="Volver al Home" onclick="window.location.href='./buscoOfrezco.php';">
+    <button class='botonDeco' id="buscoOfrezco" onclick="javascript:buscoOfrezcoUbicacion()">
         Buscar/Ofrecer Servicios
     </button>
 </div>
