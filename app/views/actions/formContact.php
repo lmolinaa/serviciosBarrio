@@ -5,8 +5,17 @@
    //******** PENDIENTE DE CONFIGURAR EL ENVÍO DE CORREOS CON SMTP *********/
     include '../../config/servicioEmail.php'; //Incluir el archivo servicioEmail par enviar correos de usuarios
 ?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de contacto</title>
+    <link rel="stylesheet" href="/marketplace/public/css/style.css">
+</head>
+<body>
 <br>
-<div class="container">
+<div class="container my-5 formu">
     <h2>Contacta MarketPlace</h2>
     <form action="" method="post">
         <div class="mb-3">
@@ -21,7 +30,7 @@
             <label for="message" class="form-label">Mensaje</label>
             <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
         </div>
-        <button type="submit"  class='botonDeco'>Enviar</button>
+        <button type="submit" class='botonDeco'>Enviar</button>
     </form>
 </div>
 

@@ -82,8 +82,6 @@ class UserController {
         
         echo json_encode(['success' => true, 'redirect' => '/marketplace/app/views/actions/buscoOfrezco.php']);
         exit();
-        /*header("Location: ../views/actions/acceso.php");
-        exit();*/
     }
 }
 

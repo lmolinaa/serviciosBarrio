@@ -21,16 +21,17 @@ function verifySession() {
 }
 
 // Inicia sesión para el usuario con datos específicos
-function loginUser($nombre, $rol, $email) {
+function loginUser($nombre, $rol, $email, $id_usuario) {
     //logs
     $logFile = __DIR__ . '/../../logs/session.log';
 
     $_SESSION['nombre'] = $nombre;
     $_SESSION['rol'] = $rol;
     $_SESSION['email'] = $email;
+    $_SESSION['id_usuario'] = $id_usuario;
     $_SESSION['last_activity'] = time(); // Registra el tiempo actual
 
-    $logMessage = date('Y-m-d H:i:s') . " session - Nombre: " . $nombre . " Rol: " . $rol . " Email: " . $email . "\n";
+    $logMessage = date('Y-m-d H:i:s') . " session - Nombre: " . $nombre . " Rol: " . $rol . " Email: " . $email . " id_usuario " . $id_usuario . "\n";
         file_put_contents($logFile, $logMessage, FILE_APPEND);
 }
 

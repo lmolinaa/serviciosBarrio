@@ -1,7 +1,19 @@
 <!-- Cabecera -->
-<link rel="stylesheet" href="/marketplace/public/css/cardsStyle.css">
+
 <?php
     include '../../../public/plantillas/cabecera.php'; // Incluir el archivo cabecera.php
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de categorías/servicios</title>
+    <link rel="stylesheet" href="/marketplace/public/css/style.css">
+    <link rel="stylesheet" href="/marketplace/public/css/cardsStyle.css">
+</head>
+<body>
+<?php
     include_once __DIR__ . '/../../../app/controllers/actionsController.php';
     //Si get es '' quiere decir que no se busca por municipio sino por categoría y servicio
     if (!isset($_GET['municipio']) ?? '') {
@@ -11,32 +23,33 @@
         $actionController = new ActionController();
         $cardsByServicio = $actionController->consultaCards($servicioSeleccionado, $categoriaSeleccionada);
     ?>
-         <br>
-        <h2><a href="./buscoOfrezco.php?categoria=<?= htmlspecialchars($categoriaSeleccionada) ?>">    
-            <img class="iconoMenu" src='/marketplace/public/img/iconos/play-skip-back-outline.svg' data-bs-toggle="tooltipAll" data-bs-placement="top" title='Volver a la pantalla anterior.'>
-            
-            <?= htmlspecialchars($categoriaSeleccionada) ?></a></h2>
+
+    <br>
+    <h2><a href="./buscoOfrezco.php?categoria=<?= htmlspecialchars($categoriaSeleccionada) ?>">    
+        <img class="iconoMenu" src='/marketplace/public/img/iconos/play-skip-back-outline.svg' data-bs-toggle="tooltipAll" data-bs-placement="top" title='Volver a la pantalla anterior.'>
         
-        <div class="container">
-            <?php foreach ($cardsByServicio as $cards): ?>
-                <div class="card">
-                    <a href='/marketplace/app/controllers/actionsController.php?id_usuario=<?= htmlspecialchars($cards["id_usuario"]) ?>&categoria=<?= htmlspecialchars($categoriaSeleccionada) ?>&servicio=<?= htmlspecialchars($servicioSeleccionado) ?>&isUbicacion=false'>
-                        <img src="<?= htmlspecialchars($cards['imagen']) ?>" data-bs-toggle="tooltipAll" data-bs-placement="top" title="<?= htmlspecialchars($cards['titulo']) ?>">
-                    </a>
-                    <div class="card-content">
-                        <h3 class="card-title"><?= htmlspecialchars($cards['servicio']) ?></h3>
-                        <div class='card-info'>
-                            <img class="iconoSubmenu" src='/marketplace/public/img/iconos/reader-outline.svg'>
-                            <strong>Ofrezco: </strong><?= htmlspecialchars($cards['titulo']) ?><br>
-                            <img class="iconoSubmenu" src='/marketplace/public/img/iconos/earth-outline.svg'>
-                            <strong>Lugar: </strong><?= htmlspecialchars($cards['municipio']) ?><br>
-                            <img class="iconoSubmenu" src='/marketplace/public/img/iconos/cash-outline.svg'>
-                            <strong>Precio apróx.: </strong><?= htmlspecialchars($cards['precio']) ?> €
-                        </div>
+        <?= htmlspecialchars($categoriaSeleccionada) ?></a></h2>
+
+    <div class="container">
+        <?php foreach ($cardsByServicio as $cards): ?>
+            <div class="card">
+                <a href='/marketplace/app/controllers/actionsController.php?id_usuario=<?= htmlspecialchars($cards["id_usuario"]) ?>&categoria=<?= htmlspecialchars($categoriaSeleccionada) ?>&servicio=<?= htmlspecialchars($servicioSeleccionado) ?>&isUbicacion=false'>
+                    <img src="<?= htmlspecialchars($cards['imagen']) ?>" data-bs-toggle="tooltipAll" data-bs-placement="top" title="<?= htmlspecialchars($cards['titulo']) ?>">
+                </a>
+                <div class="card-content">
+                    <h3 class="card-title"><?= htmlspecialchars($cards['servicio']) ?></h3>
+                    <div class='card-info'>
+                        <img class="iconoSubmenu" src='/marketplace/public/img/iconos/reader-outline.svg'>
+                        <strong>Ofrezco: </strong><?= htmlspecialchars($cards['titulo']) ?><br>
+                        <img class="iconoSubmenu" src='/marketplace/public/img/iconos/earth-outline.svg'>
+                        <strong>Lugar: </strong><?= htmlspecialchars($cards['municipio']) ?><br>
+                        <img class="iconoSubmenu" src='/marketplace/public/img/iconos/cash-outline.svg'>
+                        <strong>Precio apróx.: </strong><?= htmlspecialchars($cards['precio']) ?> €
                     </div>
                 </div>
-            <?php endforeach; ?>
-        </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
     <?php
     //Si no es que se está buscando por ubicación (en principio lo hacemos solo por municipio)
     } else {

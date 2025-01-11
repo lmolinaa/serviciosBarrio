@@ -66,7 +66,7 @@
     <p><img class="iconoSubmenu" src='/marketplace/public/img/iconos/happy-outline.svg'>
         En definitiva, nuestra intención es construir día a día una empresa que no solo persiga objetivos económicos, sino que también sea un catalizador de cambio positivo. Creemos firmemente que el éxito de un negocio debe medirse no solo por su rentabilidad, sino también por su capacidad de mejorar la vida de las personas y proteger el entorno. Esta declaración de intenciones guía nuestro camino como emprendedores socialmente responsables, comprometidos con un futuro más justo, inclusivo y sostenible.
     </p>
-</div><br>
+</div><br><br>
 
 <!-- Modal de inicio de sesión -->
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">

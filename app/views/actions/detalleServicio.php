@@ -7,8 +7,17 @@
         $isUbicacion = $_SESSION['isUbicacion'];
     } 
 ?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de contacto</title>
+    <link rel="stylesheet" href="/marketplace/public/css/style.css">
     <link rel="stylesheet" href="/marketplace/public/css/detalleOfreceStyle.css">
-   
+</head>
+<body>
+      
     <?php foreach ($detalleByCard as $card): 
         $date = new DateTime($card['fecha']);
     ?>

@@ -68,7 +68,7 @@ try {
     // Necesito sacar el nombre del id_rol para meterlo en la sesión si el usuario no existe.
     if (!$nombre_rol == 'administrador'){
         $stmt = $db->prepare(
-        "SELECT u.nombre, u.password, r.nombre_rol, e.email
+        "SELECT u.nombre, u.password, r.nombre_rol, e.email, u.id_usuario
         FROM usuarios u 
         JOIN roles r ON u.id_rol = r.id_rol 
         JOIN datos_personales e ON u.id_usuario = e.id_usuario
@@ -77,7 +77,7 @@ try {
         $stmt->execute([':email' => $email]);
         $usuarioNuevo = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        loginUser($usuarioNuevo['nombre'], $usuarioNuevo['nombre_rol'], $usuarioNuevo['email']);
+        loginUser($usuarioNuevo['nombre'], $usuarioNuevo['nombre_rol'], $usuarioNuevo['email'], $usuarioNuevo['id_usuario']);
     }
      
     //Confirmar la transacción, solo si ocurre si todo va bien

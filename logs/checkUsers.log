@@ -8,3 +8,17 @@
 2025-01-10 14:43:54 viewUsersList - Lista de usuarios 
 2025-01-10 14:45:31 checkUsers - Usuario: Eva Rol: usuarioBusca Email: eva@eva.com
 2025-01-10 14:45:31 userController - Verificación de usuario  Email eva@eva.com
+2025-01-11 10:18:59 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-11 10:18:59 userController - Verificación de usuario  Email luis@luis.es
+2025-01-11 10:34:18 checkUsers - Listado de usuarios mostrado
+2025-01-11 10:34:18 viewUsersList - Lista de usuarios 
+2025-01-11 10:35:05 checkUsers - Listado de usuarios mostrado
+2025-01-11 10:35:05 viewUsersList - Lista de usuarios 
+2025-01-11 10:38:49 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-11 10:38:49 userController - Verificación de usuario  Email luis@luis.es
+2025-01-11 10:40:22 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-11 10:40:22 userController - Verificación de usuario  Email luis@luis.es
+2025-01-11 11:01:59 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-11 11:01:59 userController - Verificación de usuario  Email luis@luis.es
+2025-01-11 11:03:20 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-11 11:03:20 userController - Verificación de usuario  Email luis@luis.es

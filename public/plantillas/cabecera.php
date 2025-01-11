@@ -6,7 +6,7 @@
     <title>Marketplace</title>
     <!-- Bootstrap y CSS -->
     <link rel="stylesheet" href="../../../public/css/cabecera.css">
-    <link rel="stylesheet" href="../../../public/css/style.css">
+   
     <link rel="stylesheet" href="../../../public/css/pie.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
 
@@ -28,6 +28,7 @@ $servicios = json_decode($jsonData, true); // Decodificamos como array asociativ
 $permisosEdit = "";
 $usuarioS = "";
 $emailS = "";
+$id_usuario = "";
 // Verifica la sesión del usuario
 if (isset($_SESSION['email']) ?? '') {
     verifySession();
@@ -35,6 +36,7 @@ if (isset($_SESSION['email']) ?? '') {
    $permisosEdit = checkAccess('edit_content'); // Verificar los permisos del usuario}
    $usuarioS = $_SESSION['nombre'];
    $emailS = $_SESSION['email'];
+   $id_usuario = $_SESSION['id_usuario'];
 }
 ?>
 
@@ -78,7 +80,7 @@ if (isset($_SESSION['email']) ?? '') {
                     echo "<li><a href='/marketplace/app/views/administracion/viewUsersList.php'><img class='iconoSubmenu' src='/marketplace/public/img/iconos/id-card-outline.svg'>Lista de usuarios</a></li>";
                     echo "<li><a href='/marketplace/app/views/user/formCreateUsers.php'><img class='iconoSubmenu' src='/marketplace/public/img/iconos/person-add-outline.svg'>Nueva cuenta</a></li>";
                 }
-            echo "<li><a href='#'><img class='iconoSubmenu' src='/marketplace/public/img/iconos/construct-outline.svg'>$emailS</a></li>";
+            echo "<li><a href='/marketplace/app/views/administracion/configUser.php?usuario=$id_usuario'><img class='iconoSubmenu' src='/marketplace/public/img/iconos/construct-outline.svg' data-bs-toggle='tooltipAll' data-bs-placement='top' title='Configuración de la cuenta'>$emailS</a></li>";
             echo "<li><a href='/marketplace/app/views/user/logout.php?mensaje=La sesión se ha cerrado correctamente.'><img class='iconoSubmenu' src='/marketplace/public/img/iconos/log-out-outline.svg'>Cerrar sesión</a></li>";
             }
         ?>
@@ -88,3 +90,6 @@ if (isset($_SESSION['email']) ?? '') {
     </ul>
 </nav>
 </header>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

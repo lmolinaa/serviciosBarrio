@@ -6,9 +6,17 @@
     $actionController = new ActionController();
     $municipios = $actionController->consultaMunicipios();
 ?>
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario crear usuario</title>
+    <link rel="stylesheet" href="/marketplace/public/css/style.css">
+</head>
+<body>
 <!-- Formulario alta usuarios -->
-<div class="container my-5" style="border: 1px solid #ccc; padding: 15px; margin-bottom: 20px;">
+<div class="container my-5 formu" style="border: 1px solid #ccc; padding: 15px; margin-bottom: 20px;">
     <h2 class="text-center mb-4">Registro de Usuario</h2>
     <form action="../../controllers/userController.php" method="POST" enctype="multipart/form-data">
         <!--<form>-->

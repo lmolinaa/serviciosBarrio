@@ -34,7 +34,7 @@ if ($action!='checkUserExists') {
     try {
         // Preparar la consulta para obtener los datos del usuario
         $stmt = $db->prepare(
-            "SELECT u.nombre, u.password, r.nombre_rol, e.email
+            "SELECT u.nombre, u.password, r.nombre_rol, e.email, u.id_usuario
             FROM usuarios u 
             JOIN roles r ON u.id_rol = r.id_rol 
             JOIN datos_personales e ON u.id_usuario = e.id_usuario
@@ -47,13 +47,13 @@ if ($action!='checkUserExists') {
         $hash = $usuario['password'];
         $nombrebd = $usuario['nombre'];
         $emailbd = $usuario['email'];
+        $id_usuario = $usuario['id_usuario'];
     
         if ($usuario) {
             //Verificar la contraseña usando verifyPassword
             if (password_verify($password, $hash)) {
                 //Contraseña correcta, guardar datos en sesión
-
-                loginUser($nombrebd, $usuario['nombre_rol'], $emailbd);
+                loginUser($nombrebd, $usuario['nombre_rol'], $emailbd, $id_usuario);
   
                 // Registrar en el log
                 $logMessage = date('Y-m-d H:i:s') . " checkUsers - Usuario: " . $nombrebd . " Rol: " . $usuario['nombre_rol'] . " Email: " . $emailbd . "\n";

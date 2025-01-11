@@ -1,5 +1,5 @@
 <!-- Cabecera -->
-<link rel="stylesheet" href="/marketplace/public/css/cardsStyle.css">
+
 <?php
     include '../../../public/plantillas/cabecera.php'; // Incluir el archivo cabecera.php
     if (isset($_SESSION['buscarPalabrasByCards']) ?? '') {
@@ -14,7 +14,16 @@
         //print_r($buscarPalabrasByCards);
     }
     ?>
-   
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de contacto</title>
+    <link rel="stylesheet" href="/marketplace/public/css/style.css">
+    <link rel="stylesheet" href="/marketplace/public/css/cardsStyle.css">
+</head>
+<body>  
    <br>
         <h2><a href="./buscoOfrezco.php">    
             <img class="iconoMenu" src='/marketplace/public/img/iconos/play-skip-back-outline.svg' data-bs-toggle="tooltipAll" data-bs-placement="top" title='Volver a la pantalla anterior.'>

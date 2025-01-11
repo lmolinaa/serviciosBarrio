@@ -3,21 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión</title>
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: rgb(210, 225, 236);
-        margin: 0;
-        padding: 0;
-        text-align: justify;
-    }
-</style>
-
+    <title>Listado de categorías/servicios</title>
+    <link rel="stylesheet" href="/marketplace/public/css/style.css">
 </head>
 <body>
-    <div class="container mt-5">
+   
+   <div class="container mt-5 login">
         <div id="error-message" class="alert alert-danger d-none"></div>    
         <form id="loginForm">
         <div class="mb-3">
@@ -28,7 +19,7 @@
             <label for="password" class="form-label">Contraseña</label>
             <input type="password" class="form-control" id="password" name="password" required>
         </div>
-        <h6><a href="#">¿Has olvidado tu contraseña?</a></h6>
+        <h6><a href="javascript:onclick=alert('Estamos trabajando en esta funcionalidad')">¿Has olvidado tu contraseña?</a></h6>
         <input type="hidden" name="action" value="checkUserExists">
         <button type="submit" class='botonDeco'>Iniciar Sesión</button>
         

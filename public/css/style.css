@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #a9dcf8; 
+    background-color: #c3e3f5; 
 }
 
 /* Contenedor principal */
@@ -245,4 +245,21 @@ input[readonly] {
 .align-right a:hover {
     color: #1ABC9C;
     text-decoration: underline;
+}
+.login a {
+    text-decoration: none;
+    color: #34495E;
+    font-weight: bold;
+}
+
+.login a:hover {
+    color: #1ABC9C;
+    text-decoration: underline;
+}
+
+.formu {
+    text-align: justify;
+    padding: 50px 20px;
+    background-color:rgb(210, 225, 236);
+ 
 }

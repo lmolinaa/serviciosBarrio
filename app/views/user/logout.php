@@ -13,15 +13,15 @@
         $mensaje = 'La sesión ha caducado, por favor, vuelva a hacer el login.';
     }
     ?>
-    <style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: rgb(210, 225, 236);
-        margin: 0;
-        padding: 0;
-        text-align: justify;
-    }
-</style>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de categorías/servicios</title>
+    <link rel="stylesheet" href="/marketplace/public/css/style.css">
+</head>
+<body>
 <div class="container mt-5 text-center">
         <div class="alert alert-warning">
             <strong><?php echo $mensaje ?></strong>
