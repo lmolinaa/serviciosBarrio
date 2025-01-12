@@ -31,13 +31,14 @@
             <button onclick="javascript:buscarPalabras()"><img width="24px" height="24" src='/marketplace/public/img/iconos/search-outline.svg'></button>
         </div>
     </div>
-
+<br>
 <!-- Contenido principal -->
+<h2>¡Somos el buscador de servicios en tu barrio!</h2>
 <div class="landing-container" style="display: flex; justify-content: space-between; align-items: center;">
-    <!-- Sección izquierda -->
+    
+<!-- Sección izquierda -->
     <div class="left-section" style="flex: 1; padding-right: 30px;">
-            
-        <h2>¡Somos el buscador de servicios en tu barrio!</h2>
+         <h3>¿Buscas un profesional? Tu vecino puede que lo sea.</h3>   
         <p>
             Bienvenido a <strong>MarketPlace</strong>, la plataforma que conecta a personas que necesitan servicios con todos los profesionales de tu zona. 
             Regístrate hoy y descubre cómo podemos ayudarte a satisfacer tus necesidades o expandir tu negocio.

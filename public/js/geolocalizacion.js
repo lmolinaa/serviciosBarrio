@@ -125,8 +125,8 @@ function enviarCodigoPostal(codigoPostal) {
 
 function changeCity(idMunicipio) {
     const selectedCity = document.getElementById(idMunicipio).value;
-    const url = '/marketplace/app/controllers/actionsController.php';
-
+        const url = '/marketplace/app/controllers/actionsController.php';
+   
     fetch(url, {
         method: 'POST',
         headers: {
@@ -138,15 +138,15 @@ function changeCity(idMunicipio) {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            return response.json(); // Asegurarnos de que estamos obteniendo JSON
+            return response.json(); //Nos aseguramos de que estamos obteniendo JSON
         })
         .then((data) => {
             if (data.success) {
-                // Limpiamos el select antes de agregar nuevos datos
+                //Limpiamos el select antes de agregar nuevos datos
                 const resultadoCP = document.getElementById('resultadoCP');
                 resultadoCP.innerHTML = ''; // Eliminamos opciones anteriores
 
-                // Agregamos las nuevas opciones al select
+                //Agregamos las nuevas opciones al select
                 data.codigosPostales.forEach((cp) => {
                     const option = document.createElement('option');
                     option.value = cp.codigo_postal;

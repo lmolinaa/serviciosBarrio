@@ -1,7 +1,4 @@
 {
-    // Use IntelliSense para saber los atributos posibles.
-    // Mantenga el puntero para ver las descripciones de los existentes atributos.
-    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
@@ -13,6 +10,16 @@
                 "/var/www/html": "${workspaceFolder}"
             },
             "log": true
+        },
+        {
+            "name": "Launch Chrome against localhost",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:8080/marketplace",
+            "webRoot": "${workspaceFolder}",
+            "pathMapping": {
+                "/var/www/html": "${workspaceFolder}"
+            }
         }
     ]
 }

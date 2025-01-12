@@ -22,3 +22,27 @@
 2025-01-11 11:01:59 userController - Verificación de usuario  Email luis@luis.es
 2025-01-11 11:03:20 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
 2025-01-11 11:03:20 userController - Verificación de usuario  Email luis@luis.es
+2025-01-11 18:17:14 checkUsers - Usuario: Eva Rol: usuarioBusca Email: eva@eva.com
+2025-01-11 18:17:14 userController - Verificación de usuario  Email eva@eva.com
+2025-01-11 18:26:30 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-11 18:26:30 userController - Verificación de usuario  Email luis@luis.es
+2025-01-11 18:31:00 checkUsers - Usuario: Eva Rol: usuarioBusca Email: eva@eva.com
+2025-01-11 18:31:00 userController - Verificación de usuario  Email eva@eva.com
+2025-01-11 19:21:41 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-11 19:21:41 userController - Verificación de usuario  Email luis@luis.es
+2025-01-11 19:30:38 checkUsers - Usuario: Eva Rol: Busco servicio Email: eva@eva.com
+2025-01-11 19:30:38 userController - Verificación de usuario  Email eva@eva.com
+2025-01-11 19:31:08 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-11 19:31:08 userController - Verificación de usuario  Email luis@luis.es
+2025-01-11 20:55:48 checkUsers - Usuario: Ramón Rol: Ofrezco servicio Email: ramon@ramon.es
+2025-01-11 20:55:48 userController - Verificación de usuario  Email ramon@ramon.es
+2025-01-12 09:58:34 checkUsers - Usuario: Ramón Rol: Ofrezco servicio Email: ramon@ramon.es
+2025-01-12 09:58:34 userController - Verificación de usuario  Email ramon@ramon.es
+2025-01-12 10:46:14 checkUsers - Usuario: Ramón Rol: Ofrezco servicio Email: ramon@ramon.es
+2025-01-12 10:46:14 userController -> checkUserExists: Verificación de usuario  Email ramon@ramon.es
+2025-01-12 17:56:25 checkUsers - Usuario: Ramón Rol: Ofrezco servicio Email: ramon@ramon.es
+2025-01-12 17:56:25 userController -> checkUserExists: Verificación de usuario  Email ramon@ramon.es
+2025-01-12 18:10:59 checkUsers - Usuario: Ramón Rol: Ofrezco servicio Email: ramon@ramon.es
+2025-01-12 18:10:59 userController -> checkUserExists: Verificación de usuario  Email ramon@ramon.es
+2025-01-12 18:37:12 checkUsers - Usuario: Ramón Rol: Ofrezco servicio Email: ramon@ramon.es
+2025-01-12 18:37:12 userController -> checkUserExists: Verificación de usuario  Email ramon@ramon.es

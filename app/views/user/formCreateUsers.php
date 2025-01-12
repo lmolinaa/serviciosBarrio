@@ -5,6 +5,10 @@
     require_once '../../../app/models/consultaCP.php';
     $actionController = new ActionController();
     $municipios = $actionController->consultaMunicipios();
+    $id_rolSession = '';
+    if (isset($_SESSION['rol']) ?? '') {
+        $id_rolSession = $_SESSION['rol'];
+    }
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -15,7 +19,7 @@
     <link rel="stylesheet" href="/marketplace/public/css/style.css">
 </head>
 <body>
-<!-- Formulario alta usuarios -->
+<!-- Formulario modificar usuarios -->
 <div class="container my-5 formu" style="border: 1px solid #ccc; padding: 15px; margin-bottom: 20px;">
     <h2 class="text-center mb-4">Registro de Usuario</h2>
     <form action="../../controllers/userController.php" method="POST" enctype="multipart/form-data">
@@ -85,6 +89,9 @@
                     <option value="" selected>Selecciona Perfil</option>
                     <option value="2">Ofrezco servicio</option>
                     <option value="3">Busco servicio</option>
+                    <?php if ($id_rolSession==="administrador"): ?>
+                        <option value="1">Administrador</option>
+                    <?php endif; ?>
                 </select>
                 <span id="id_rol_error" class="error-message"></span>
                 <input type="hidden" name="action" value="create">

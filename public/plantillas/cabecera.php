@@ -80,7 +80,7 @@ if (isset($_SESSION['email']) ?? '') {
                     echo "<li><a href='/marketplace/app/views/administracion/viewUsersList.php'><img class='iconoSubmenu' src='/marketplace/public/img/iconos/id-card-outline.svg'>Lista de usuarios</a></li>";
                     echo "<li><a href='/marketplace/app/views/user/formCreateUsers.php'><img class='iconoSubmenu' src='/marketplace/public/img/iconos/person-add-outline.svg'>Nueva cuenta</a></li>";
                 }
-            echo "<li><a href='/marketplace/app/views/administracion/configUser.php?usuario=$id_usuario'><img class='iconoSubmenu' src='/marketplace/public/img/iconos/construct-outline.svg' data-bs-toggle='tooltipAll' data-bs-placement='top' title='Configuración de la cuenta'>$emailS</a></li>";
+            echo "<li><a href='/marketplace/app/views/administracion/configUser.php?id_usuario=$id_usuario'><img class='iconoSubmenu' src='/marketplace/public/img/iconos/construct-outline.svg' data-bs-toggle='tooltipAll' data-bs-placement='top' title='Configuración de la cuenta'>$emailS</a></li>";
             echo "<li><a href='/marketplace/app/views/user/logout.php?mensaje=La sesión se ha cerrado correctamente.'><img class='iconoSubmenu' src='/marketplace/public/img/iconos/log-out-outline.svg'>Cerrar sesión</a></li>";
             }
         ?>
