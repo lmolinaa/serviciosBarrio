@@ -1,6 +1,6 @@
 <!-- Cabecera -->
 <?php
-    include '../../../public/plantillas/cabecera.php'; // Incluir el archivo cabecera.php
+    include '../../../public/plantillas/cabecera.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -14,10 +14,6 @@
 
 <?php
 include_once __DIR__ . '/../../../app/controllers/userController.php';
-/*include_once '../../../app/controllers/actionsController.php';
-require_once '../../../app/models/consultaCP.php';
-$actionController = new ActionController();
-$municipios = $actionController->consultaMunicipios();*/
 
 $id_rolSession = '';
 if (isset($_SESSION['rol']) ?? '') {
@@ -37,6 +33,9 @@ $direccion = '';
 $password = '';
 $id_usuario = "";
 
+if (isset($_GET['mensaje']) ?? '') {
+    $mensaje = $_GET['mensaje']; 
+}
 if (isset($_GET['id_usuario'])) {
     $id_usuario = $_GET['id_usuario']; 
   
@@ -45,8 +44,8 @@ if (isset($_GET['id_usuario'])) {
     $result = $userController->consultaDatosUser($id_usuario);
     
     //Traigo los arrays de las consultas para mostrar por pantalla los datos necesarios.
-    $allDataUser = $result['allDataUser'];
-    $allMunicipios = $result['allMunicipios'];
+    $allDataUser = $result['allDataUser']; //Datos usuario
+    $allMunicipios = $result['allMunicipios']; //Datos municipios (luego carga los CP)
 
     foreach ($allDataUser as $datosUsuario){
         $nombre=htmlspecialchars($datosUsuario['nombre']);
@@ -62,14 +61,6 @@ if (isset($_GET['id_usuario'])) {
         $password=htmlspecialchars($datosUsuario['password']);
     }
 }
-        /*echo "<pre>";
-        print_r($allDataUser);
-        echo "</pre>";
-        echo "<pre>";
-        print_r($allMunicipios);
-        echo "</pre>";
-
-        die();*/
 ?>
 
 <!-- Formulario modificar usuarios -->
@@ -159,6 +150,12 @@ if (isset($_GET['id_usuario'])) {
     </form>
 </div>
 <br><br>
+
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <?= $mensaje ?>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<br>
 
 <!-- Pie de página -->
    <footer>

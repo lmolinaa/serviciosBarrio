@@ -59,7 +59,7 @@ function checkAccess($requiredPermission) {
             'login','dashboard', 'offer_services', 'view_content',
         ],
         'usuarioBusca' => [
-            'login','dashboard', 'search_services', 'view_content',
+            'login','dashboard', 'view_content',
         ],
     ];
 

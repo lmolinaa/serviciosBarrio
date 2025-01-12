@@ -127,11 +127,6 @@ class UserController {
             "id_usuario" => $_POST['id_usuario']
         ];
 
-        /*echo "<pre>";
-        print_r($datosUsuario);
-        echo "</pre>";
-        die();*/
-
         //Modificar usaurio
         $modeloUsers = new Users();
         $modifOK=$modeloUsers->updateDataUser($datosUsuario);
@@ -144,14 +139,13 @@ class UserController {
         file_put_contents($logFile, $logMessage, FILE_APPEND);
         
         if ($modifOK===true){
-            header("Location: ../views/administracion/configUser.php?id_usuario=" . $datosUsuario['id_usuario']);
+            header("Location: ../views/administracion/configUser.php?id_usuario=" . $datosUsuario['id_usuario'] . "&mensaje=Actualización satisfactoria");
             exit();
         }else{
-            header("Location: ../views/user/logout.php?mensaje='Se ha producido un error en la modificación del usuario.'");
+            header("Location: ../views/administracion/configUser.php?mensaje=Se ha producido un error en la modificación del usuario.");
             exit(); 
         }
     }
-
 }
 
 // Manejo de solicitudes dependerá de lo que llegue en el action se hara una cosa u otra

@@ -46,3 +46,19 @@
 2025-01-12 18:10:59 userController -> checkUserExists: Verificación de usuario  Email ramon@ramon.es
 2025-01-12 18:37:12 checkUsers - Usuario: Ramón Rol: Ofrezco servicio Email: ramon@ramon.es
 2025-01-12 18:37:12 userController -> checkUserExists: Verificación de usuario  Email ramon@ramon.es
+2025-01-12 19:29:40 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-12 19:29:40 userController -> checkUserExists: Verificación de usuario  Email luis@luis.es
+2025-01-12 19:30:32 checkUsers - Usuario: Ramón Rol: Ofrezco servicio Email: ramon@ramon.es
+2025-01-12 19:30:32 userController -> checkUserExists: Verificación de usuario  Email ramon@ramon.es
+2025-01-12 19:57:54 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-12 19:57:54 userController -> checkUserExists: Verificación de usuario  Email luis@luis.es
+2025-01-12 20:00:43 checkUsers - Listado de usuarios mostrado
+2025-01-12 20:00:43 viewUsersList - Lista de usuarios 
+2025-01-12 20:14:06 checkUsers - Usuario: Eva Rol: Busco servicio Email: eva@eva.com
+2025-01-12 20:14:06 userController -> checkUserExists: Verificación de usuario  Email eva@eva.com
+2025-01-12 20:15:00 checkUsers - Usuario: Ramón Rol: Ofrezco servicio Email: ramon@ramon.es
+2025-01-12 20:15:00 userController -> checkUserExists: Verificación de usuario  Email ramon@ramon.es
+2025-01-12 20:15:15 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-12 20:15:15 userController -> checkUserExists: Verificación de usuario  Email luis@luis.es
+2025-01-12 20:18:05 checkUsers - Usuario: Ramón Rol: Ofrezco servicio Email: ramon@ramon.es
+2025-01-12 20:18:05 userController -> checkUserExists: Verificación de usuario  Email ramon@ramon.es

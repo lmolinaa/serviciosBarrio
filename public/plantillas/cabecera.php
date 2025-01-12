@@ -26,18 +26,21 @@ $jsonData = file_get_contents($jsonFile);
 $servicios = json_decode($jsonData, true); // Decodificamos como array asociativo
 
 $permisosEdit = "";
+$offer_services = "";
 $usuarioS = "";
 $emailS = "";
 $id_usuario = "";
 // Verifica la sesión del usuario
 if (isset($_SESSION['email']) ?? '') {
     verifySession();
-   //llamo a la checkAccess para controlar lo que puede ver el usuario en función del rol
-   $permisosEdit = checkAccess('edit_content'); // Verificar los permisos del usuario}
+   //Llamo a la checkAccess para controlar lo que puede ver el usuario en función del rol
+   $permisosEdit = checkAccess('edit_content'); //Verificar los permisos del usuario de edición
+   $offer_services = checkAccess('offer_services'); //Verificar los permisos del usuario sobre Ofrezco Servicio
    $usuarioS = $_SESSION['nombre'];
    $emailS = $_SESSION['email'];
    $id_usuario = $_SESSION['id_usuario'];
 }
+echo ">>>>>>>>>>>>>>>> " . $permisosEdit . $offer_services;
 ?>
 
 <!-- Cabecera -->
@@ -80,7 +83,11 @@ if (isset($_SESSION['email']) ?? '') {
                     echo "<li><a href='/marketplace/app/views/administracion/viewUsersList.php'><img class='iconoSubmenu' src='/marketplace/public/img/iconos/id-card-outline.svg'>Lista de usuarios</a></li>";
                     echo "<li><a href='/marketplace/app/views/user/formCreateUsers.php'><img class='iconoSubmenu' src='/marketplace/public/img/iconos/person-add-outline.svg'>Nueva cuenta</a></li>";
                 }
-            echo "<li><a href='/marketplace/app/views/administracion/configUser.php?id_usuario=$id_usuario'><img class='iconoSubmenu' src='/marketplace/public/img/iconos/construct-outline.svg' data-bs-toggle='tooltipAll' data-bs-placement='top' title='Configuración de la cuenta'>$emailS</a></li>";
+            echo "<li><a href='/marketplace/app/views/administracion/configUser.php?id_usuario=$id_usuario' data-bs-toggle='tooltipAll' data-bs-placement='top' title='Configuración de la cuenta'><img class='iconoSubmenu' src='/marketplace/public/img/iconos/construct-outline.svg'>$emailS</a></li>";
+            
+                if ($offer_services){
+                    echo "<li><a href='/marketplace/app/views/administracion/configCards.php?id_usuario=$id_usuario' data-bs-toggle='tooltipAll' data-bs-placement='top' title='Configuración mis tarjetas de Ofrezco Servicio'><img class='iconoSubmenu' src='/marketplace/public/img/iconos/briefcase-outline.svg'>Mis tarjetas</a></li>";
+                }
             echo "<li><a href='/marketplace/app/views/user/logout.php?mensaje=La sesión se ha cerrado correctamente.'><img class='iconoSubmenu' src='/marketplace/public/img/iconos/log-out-outline.svg'>Cerrar sesión</a></li>";
             }
         ?>
