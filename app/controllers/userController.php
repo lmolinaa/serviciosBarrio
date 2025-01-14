@@ -27,6 +27,7 @@ class UserController {
         $titulo = $_POST['titulo'] ?? ''; 
         $fecha = $_POST['fecha'] ?? ''; 
         $detalle = $_POST['detalle'] ?? ''; 
+        $empresa = $_POST['empresa'] ?? ''; 
         $file = $_POST['file'] ?? '';  
         $precio = $_POST['precio'] ?? ''; 
         $serviceMunicipio = $_POST['serviceMunicipio'] ?? ''; 

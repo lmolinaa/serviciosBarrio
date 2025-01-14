@@ -63,8 +63,8 @@ if (isset($_SESSION['rol']) == "administrador") {
                             echo '<li>';
                             if ($permisos==="administrador"){
                                 /******************* Está pendiente de desarrollar el edit y el delete ************** */
-                                echo '&nbsp;&nbsp;<a href="/marketplace/app/views/actions/editService.php?categoria=' . urlencode($nombreCategoria) . '&servicio=' . urlencode($servicio) . '"><img width="24px" height="24" src="/marketplace/public/img/iconos/pencil-outline.svg" data-bs-toggle="tooltipAll" data-bs-placement="top" title="Editar"></a>';
-                                echo '&nbsp;&nbsp;&nbsp;<a href="/marketplace/app/views/actions/deleteService.php?categoria=' . urlencode($nombreCategoria) . '&servicio=' . urlencode($servicio) . '"><img width="24px" height="24" src="/marketplace/public/img/iconos/trash-outline.svg" data-bs-toggle="tooltipAll" data-bs-placement="top" title="Eliminar"></a>';
+                                echo '&nbsp;&nbsp;<a href="/marketplace/app/views/actions/editService.php?categoria=' . urlencode($nombreCategoria) . '&servicio=' . urlencode($servicio) . '"><img class="iconoMenu" src="/marketplace/public/img/iconos/pencil-outline.svg" data-bs-toggle="tooltipAll" data-bs-placement="top" title="Editar"></a>';
+                                echo '&nbsp;&nbsp;&nbsp;<a href="/marketplace/app/views/actions/deleteService.php?categoria=' . urlencode($nombreCategoria) . '&servicio=' . urlencode($servicio) . '"><img class="iconoMenu" src="/marketplace/public/img/iconos/trash-outline.svg" data-bs-toggle="tooltipAll" data-bs-placement="top" title="Eliminar"></a>';
                             }
                             echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="./serviciosCards.php?servicio=' . htmlspecialchars($servicio) . '&categoria=' . htmlspecialchars($nombreCategoria) . '">' . htmlspecialchars($servicio) . '</a></li>';
                         } else {

@@ -1,2 +1,12 @@
 2025-01-11 11:16:09 Inserción satisfactoria - Nombre: Ramiro - creado con ID: 43 - Nombre Rol:  - Email: ramiro@gmail.com -Municipio Arroyomolinos -CP: 28939
 2025-01-11 11:16:09 userController - Usuario Ramiro creado
+2025-01-14 13:32:20 Inserción satisfactoria - Nombre: Rosendo - creado con ID: 44 - Nombre Rol: administrador - Email: ros@gmail.com -Municipio Alcorcón -CP: 28923
+2025-01-14 13:32:20 userController -> create: - Usuario Rosendo creado
+2025-01-14 17:31:31 Inserción satisfactoria - Nombre: Nicasio - creado con ID: 45 - Nombre Rol:  - Email: nicasio@yahoo.es -Municipio Algete -CP: 28119 -Password: 1
+2025-01-14 17:31:31 userController -> create: - Usuario Nicasio creado
+2025-01-14 17:54:58 Inserción satisfactoria - Nombre: Isabel - creado con ID: 46 - Nombre Rol:  - Email: isa@hotmail.com -Municipio Guadarrama -CP: 28440 -Password: 1
+2025-01-14 17:54:58 userController -> create: - Usuario Isabel creado
+2025-01-14 19:19:35 Inserción satisfactoria - Nombre: Helena - creado con ID: 47 - Nombre Rol:  - Email: helena@yahoo.com -Municipio Alcorcón -CP: 28923 -Password: 1
+2025-01-14 19:19:35 userController -> create: - Usuario Helena creado
+2025-01-14 19:23:41 Inserción satisfactoria - Nombre: Cris - creado con ID: 48 - Nombre Rol:  - Email: cris@cris.com -Municipio Madrid -CP: 28003 -Password: 1
+2025-01-14 19:23:41 userController -> create: - Usuario Cris creado

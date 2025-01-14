@@ -2,6 +2,7 @@
 
 <?php
     include '../../../public/plantillas/cabecera.php'; // Incluir el archivo cabecera.php
+    unset($_SESSION['detalleByCard']);//borramos de la session el detalle
 ?>
 <!DOCTYPE html>
 <html lang="es">

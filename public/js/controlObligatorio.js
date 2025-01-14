@@ -1,8 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('form'); // Selecciona el formulario
+    const form = document.getElementById('formCreateUsers'); // Selecciona el formulario por ID
+    if (!form) return; // Si el formulario no existe, salir
+
     const campos = ['nombre', 'apellido', 'email', 'listMunicipios', 'resultadoCP', 'password', 'id_rol']; // IDs de los campos a validar
 
-    form.addEventListener('submit', function(event) {
+    form.addEventListener('submit', async function(event) {
+        event.preventDefault(); // Prevenir el envío del formulario inicialmente
         let formValido = true;
 
         // Obtener el valor de perfil dentro del evento submit
@@ -16,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         console.log(campos); 
 
+        // Validación de campos obligatorios
         campos.forEach(function(campo) {
             const input = document.getElementById(campo);
             const errorElement = document.getElementById(campo + '_error');
@@ -23,24 +27,24 @@ document.addEventListener('DOMContentLoaded', function() {
             if (input) {
                 if (input.value.trim() === '') {
                     formValido = false;
-                    input.classList.add('error'); //Añadir clase de error
+                    input.classList.add('error'); // Añadir clase de error
                     if (errorElement) {
                         errorElement.textContent = 'Este campo es obligatorio';
                         errorElement.style.display = 'block';
                     }
                 } else {
-                    //Validar el campo email
+                    // Validar el campo email
                     if (campo === 'email') {
                         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                         if (!emailRegex.test(input.value.trim())) {
                             formValido = false;
-                            input.classList.add('error'); //Añadir clase de error
+                            input.classList.add('error'); // Añadir clase de error
                             if (errorElement) {
                                 errorElement.textContent = 'Por favor, ingresa un email válido';
                                 errorElement.style.display = 'block';
                             }
                         } else {
-                            input.classList.remove('error'); //Remover clase de error
+                            input.classList.remove('error'); // Remover clase de error
                             if (errorElement) {
                                 errorElement.textContent = '';
                                 errorElement.style.display = 'none';
@@ -48,39 +52,35 @@ document.addEventListener('DOMContentLoaded', function() {
                         }
                     }
 
-                    //Validar el campo codigo_postal
+                    // Validar el campo codigo_postal
                     if (campo === 'resultadoCP') {
-                        const codigoPostalRegex = /^\d{5}$/; //Código postal de 5 dígitos
+                        const codigoPostalRegex = /^\d{5}$/; // Código postal de 5 dígitos
                         if (!codigoPostalRegex.test(input.value.trim())) {
                             formValido = false;
-                            input.classList.add('error'); //Añadir clase de error
+                            input.classList.add('error'); // Añadir clase de error
                             if (errorElement) {
                                 errorElement.textContent = 'Por favor, ingresa un código postal válido';
                                 errorElement.style.display = 'block';
                             }
                         } else {
-                            input.classList.remove('error'); //Remover clase de error
+                            input.classList.remove('error'); // Remover clase de error
                             if (errorElement) {
                                 errorElement.textContent = '';
                                 errorElement.style.display = 'none';
                             }
-                        }
-                    }
-
-                    //Validar otros campos
-                    if (campo !== 'email' && campo !== 'resultadoCP') {
-                        input.classList.remove('error'); //Remover clase de error
-                        if (errorElement) {
-                            errorElement.textContent = '';
-                            errorElement.style.display = 'none';
                         }
                     }
                 }
             }
         });
 
-        if (!formValido) {
-            event.preventDefault(); //Prevenir el envío del formulario si no es válido
+        // Si todos los campos obligatorios son válidos, llamar a la función de controlPalabrasInadecuadas.js
+        if (formValido) {
+            const forbiddenWordsValid = await validateForbiddenWords(form);
+            //alert(formValido + " - " + forbiddenWordsValid);
+            if (forbiddenWordsValid) {
+                form.submit();
+            }
         }
     });
 });
@@ -104,20 +104,3 @@ document.addEventListener('DOMContentLoaded', function() {
         counter.textContent = `${length}/300`;
     });
 });
-
-/*function pruebas(){
-    var nombre = document.getElementById('nombre').value;
-    var apellido = document.getElementById('apellido').value;
-    var email = document.getElementById('email').value;
-    var telefono = document.getElementById('telefono').value;
-    var pais = document.getElementById('pais').value;
-    var direccion = document.getElementById('direccion').value;
-
-    var listMunicipios = document.getElementById('listMunicipios').value;
-    var resultadoCP = document.getElementById('resultadoCP').value;
-    var password = document.getElementById('password').value;
-    var id_rol = document.getElementById('id_rol').value;
-
-
-    alert (nombre + " " + apellido + " " + email + " " + telefono + " " + pais + " " + direccion + " " + listMunicipios + " " + resultadoCP + " " + password + " " + id_rol);
-}*/

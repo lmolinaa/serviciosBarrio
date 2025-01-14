@@ -80,13 +80,13 @@ class Acciones {
         $logFile = __DIR__ . '/../../logs/modeloAcciones.log';
         $db = Database::connect();
         $query = "SELECT
-                                a.id_usuario, a.categoria, a.servicio, a.titulo, a.detalle, a.imagen, a.fecha, a.precio, a.municipio,
-                                b.email, b.telefono,
-                                c.nombre, c.apellido
-                                FROM usuario_ofrece a 
-                                INNER JOIN datos_personales b ON a.id_usuario = b.id_usuario
-                                INNER JOIN usuarios c ON a.id_usuario = c.id_usuario
-                                WHERE a.id_usuario = :id_usuario AND a.categoria = :categoria AND a.servicio = :servicio";
+                    a.id, a.id_usuario, a.categoria, a.servicio, a.titulo, a.detalle, a.imagen,
+                    a.fecha, a.precio, a.municipio, a.empresa, b.email, b.telefono,
+                    c.nombre, c.apellido
+                    FROM usuario_ofrece a 
+                    INNER JOIN datos_personales b ON a.id_usuario = b.id_usuario
+                    INNER JOIN usuarios c ON a.id_usuario = c.id_usuario
+                    WHERE a.id_usuario = :id_usuario AND a.categoria = :categoria AND a.servicio = :servicio";
         $stmt = $db->prepare($query);
         $stmt->bindParam(':id_usuario', $id_usuario, PDO::PARAM_STR);
         $stmt->bindParam(':categoria', $categoriaSeleccionada, PDO::PARAM_STR);
@@ -124,6 +124,27 @@ class Acciones {
         } catch (PDOException $e) {
             // Registrar la consulta y los parámetros en el log si hay error
             $logMessage = date('Y-m-d H:i:s') . " Consulta fallida: " . $query . " - Params: " . json_encode(['palabras buscadas' => $buscarPalabras]) . " - Error: " . $e->getMessage() . "\n";
+            file_put_contents($logFile, $logMessage, FILE_APPEND);
+            return false;
+        }
+    }
+
+    public function getCardsByIdUsuario($cardsByIdUsuario){
+        $logFile = __DIR__ . '/../../logs/modeloAcciones.log';
+        $db = Database::connect();
+        $query = "SELECT * FROM usuario_ofrece 
+                        WHERE id_usuario LIKE :id_usuario";
+        $stmt = $db->prepare($query);
+        $stmt->bindParam(':id_usuario', $cardsByIdUsuario, PDO::PARAM_STR);   
+       
+        try {
+            $stmt->execute();
+            $idCardsByIdUsuario = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            return $idCardsByIdUsuario;
+        } catch (PDOException $e) {
+            // Registrar la consulta y los parámetros en el log si hay error
+            $logMessage = date('Y-m-d H:i:s') . " Consulta fallida: " . $query . " - Error: " . $e->getMessage() . "\n";
             file_put_contents($logFile, $logMessage, FILE_APPEND);
             return false;
         }

@@ -9,6 +9,7 @@
     if (isset($_SESSION['rol']) ?? '') {
         $id_rolSession = $_SESSION['rol'];
     }
+    //$fechaActual = date('d/m/Y');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -22,7 +23,7 @@
 <!-- Formulario modificar usuarios -->
 <div class="container my-5 formu" style="border: 1px solid #ccc; padding: 15px; margin-bottom: 20px;">
     <h2 class="text-center mb-4">Registro de Usuario</h2>
-    <form action="../../controllers/userController.php" method="POST" enctype="multipart/form-data">
+    <form action="../../controllers/userController.php" method="POST" enctype="multipart/form-data" id="formCreateUsers" class="control-form">
         <!--<form>-->
         <div class="row mb-3">
             <div class="col-md-6">
@@ -44,7 +45,7 @@
             </div>
             <div class="col-md-6">
                 <label for="telefono" class="form-label">Teléfono:</label>
-                <input type="text" id="telefono" name="telefono" class="form-control">
+                <input type="text" id="telefono" name="telefono" class="form-control" placeholder="Preferiblemente Móvil">
             </div>
         </div>
         <div class="row mb-3">
@@ -132,7 +133,7 @@
                 <span id="titulo_error" class="error-message"></span>
             </div>
             <div class="col-md-6">
-                <label for="fecha" class="form-label">Fecha desde la que se podrá presar el servicio*:</label>
+                <label for="fecha" class="form-label">Fecha desde la que se podrá prestar el servicio*:</label>
                 <input type="date" id="fecha" name="fecha" class="form-control">
                 <span id="fecha_error" class="error-message"></span>
             </div>
@@ -153,11 +154,16 @@
             </div>
             <div class="col-md-6">
                 <label for="precio" class="form-label">Precio aproximado (si se sabe):</label>
-                <input type="number" id="precio" name="precio" class="form-control" step="0.01" min="0" placeholder="En €">
+                <input type="text" id="precio" name="precio" class="form-control" placeholder="En € o €/h">
             </div>
         </div>
 
-        <div class="col-md-12">
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="empresa" class="form-label">Empresa:</label>
+                <input type="text" id="empresa" name="empresa" class="form-control">
+            </div>
+            <div class="col-md-6">
             <label for="serviceMunicipio" class="form-label">Municipio donde se prestará el servicio*:</label>
             <select id="serviceMunicipio" name="serviceMunicipio" class="form-select">
                 <option value="">Selecciona una localidad</option>
@@ -168,13 +174,14 @@
                 <?php endforeach; ?>
             </select>
             <span id="serviceMunicipio_error" class="error-message"></span>
+            </div>
         </div>
     </div>
-
-        <div class="text-center">
-            <button class='botonDeco' type="submit">Registrar</button>
-            <!--<button class='botonDeco' onclick="pruebas()">Registrar</button>-->
-        </div>
+    <div class="mensajeInadecuado"></div>
+    <div class="text-center">
+        <button class='botonDeco' type="submit">Registrar</button>
+    </div>
+        
     </form>
 </div>
 
@@ -215,6 +222,8 @@
     var servicios = <?php echo json_encode($servicios); ?>;
 </script>
 <script src="/marketplace/public/js/categoria_servicios.js"></script>
+<script src="/marketplace/public/js/controlObligatorio.js"></script>
+<script src="/marketplace/public/js/controlPalabrasInadecuadas.js"></script>
 
 </body>
 </html>

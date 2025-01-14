@@ -9,8 +9,6 @@
    
     <link rel="stylesheet" href="../../../public/css/pie.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
-
-    <script type="text/javascript" src="../../../public/js/controlObligatorio.js"></script>
 </head>
 
 <body>
@@ -30,17 +28,18 @@ $offer_services = "";
 $usuarioS = "";
 $emailS = "";
 $id_usuario = "";
+$login = "";
 // Verifica la sesión del usuario
 if (isset($_SESSION['email']) ?? '') {
     verifySession();
    //Llamo a la checkAccess para controlar lo que puede ver el usuario en función del rol
    $permisosEdit = checkAccess('edit_content'); //Verificar los permisos del usuario de edición
    $offer_services = checkAccess('offer_services'); //Verificar los permisos del usuario sobre Ofrezco Servicio
+   $login  = checkAccess('offer_services'); //Verificar los permisos del usuario sobre Ofrezco Servicio
    $usuarioS = $_SESSION['nombre'];
    $emailS = $_SESSION['email'];
    $id_usuario = $_SESSION['id_usuario'];
 }
-echo ">>>>>>>>>>>>>>>> " . $permisosEdit . $offer_services;
 ?>
 
 <!-- Cabecera -->
@@ -86,7 +85,7 @@ echo ">>>>>>>>>>>>>>>> " . $permisosEdit . $offer_services;
             echo "<li><a href='/marketplace/app/views/administracion/configUser.php?id_usuario=$id_usuario' data-bs-toggle='tooltipAll' data-bs-placement='top' title='Configuración de la cuenta'><img class='iconoSubmenu' src='/marketplace/public/img/iconos/construct-outline.svg'>$emailS</a></li>";
             
                 if ($offer_services){
-                    echo "<li><a href='/marketplace/app/views/administracion/configCards.php?id_usuario=$id_usuario' data-bs-toggle='tooltipAll' data-bs-placement='top' title='Configuración mis tarjetas de Ofrezco Servicio'><img class='iconoSubmenu' src='/marketplace/public/img/iconos/briefcase-outline.svg'>Mis tarjetas</a></li>";
+                    echo "<li><a href='/marketplace/app/controllers/actionsController.php?cardsByIdUsuario=$id_usuario' data-bs-toggle='tooltipAll' data-bs-placement='top' title='Configurar mis tarjetas de Ofrezco Servicio'><img class='iconoSubmenu' src='/marketplace/public/img/iconos/briefcase-outline.svg'>Mis tarjetas</a></li>";
                 }
             echo "<li><a href='/marketplace/app/views/user/logout.php?mensaje=La sesión se ha cerrado correctamente.'><img class='iconoSubmenu' src='/marketplace/public/img/iconos/log-out-outline.svg'>Cerrar sesión</a></li>";
             }

@@ -102,6 +102,28 @@ class ActionController {
         header("Location: /marketplace/app/views/actions/buscarServiciosCards.php");
         exit();  
     }
+    
+    public static function cardsByIdUsuario($cardsByIdUsuario){
+        // Iniciar la sesión si no está iniciada
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+        //Instanciamos la clase Acciones del modeloAcciones.php para poder llamar a sus métodos
+        $modeloAcciones = new Acciones();
+        $idCardsByIdUsuario = $modeloAcciones->getCardsByIdUsuario($cardsByIdUsuario);
+        
+        //Metemos en la session todo lo que nos venga de la búsqueda (es más seguro)
+        $_SESSION['idCardsByIdUsuario'] = $idCardsByIdUsuario;
+        
+        /*echo "<pre>";
+            print_r($_SESSION);
+            echo "</pre>";
+            die();*/
+        
+        //Redirige a la página destino
+        header("Location: /marketplace/app/views/actions/buscarServiciosCards.php");
+        exit();  
+    }
 }
 
 // Manejo de solicitudes
@@ -111,13 +133,11 @@ class ActionController {
             ActionController::consultaCP();
         } else if (isset($_POST['city'])) {
             $selectedCity = $_POST['city'];
-            // Llamar a la función para manejar la ciudad seleccionada
             ActionController::consultaCPbyCity($selectedCity);
         } 
     } else if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         if (isset($_GET['city'])) {
             $selectedCity = $_GET['city'];
-            // Llamar a la función para manejar la ciudad seleccionada
             ActionController::consultaCPbyCity($selectedCity);
         } else if (isset($_GET['id_usuario'])) {
             $id_usuario = $_GET['id_usuario'];
@@ -128,6 +148,9 @@ class ActionController {
         } else if (isset($_GET['buscarPalabras'])) {
             $buscarPalabras = $_GET['buscarPalabras'];
             ActionController::busarPalabrasIndex($buscarPalabras);
+        }else if (isset($_GET['cardsByIdUsuario'])) {
+            $cardsByIdUsuario = $_GET['cardsByIdUsuario'];
+            ActionController::cardsByIdUsuario($cardsByIdUsuario);
         }
     }
 ?>

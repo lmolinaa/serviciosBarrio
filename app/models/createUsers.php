@@ -6,6 +6,7 @@ $logFile = __DIR__ . '/../../logs/createUsers.log';
 
 // Encriptar la contraseña
 $hashedPassword = Auth::encryptPassword($password);
+$verificarPass = Auth::verifyPassword($password, $hashedPassword);
 
 $nombre_rol = '';
 if (isset($_SESSION['rol'])) {
@@ -26,7 +27,7 @@ try {
     $stmtUsuario->execute([
         ':nombre' => $nombre,
         ':apellido' => $apellido,
-        ':password' => $password,
+        ':password' => $hashedPassword,
         ':id_rol' => $id_rol,
     ]);
 
@@ -49,8 +50,8 @@ try {
 
     // Insertar en la tabla usuario_ofrece si el id_rol es 2
     if ($id_rol == 2) {
-        $queryUsuarioOfrece = "INSERT INTO usuario_ofrece (id_usuario, categoria, servicio, titulo, detalle, imagen, fecha, precio, municipio) 
-                               VALUES (:id_usuario, :categoria, :servicio, :titulo, :detalle, :imagen, :fecha, :precio, :serviceMunicipio)";
+        $queryUsuarioOfrece = "INSERT INTO usuario_ofrece (id_usuario, categoria, servicio, titulo, detalle, empresa, imagen, fecha, precio, municipio) 
+                               VALUES (:id_usuario, :categoria, :servicio, :titulo, :detalle, :empresa, :imagen, :fecha, :precio, :serviceMunicipio)";
         $stmtUsuarioOfrece = $db->prepare($queryUsuarioOfrece);
         $stmtUsuarioOfrece->execute([
             ':id_usuario' => $usuario_id,
@@ -58,6 +59,7 @@ try {
             ':servicio' => $servicio,
             ':titulo' => $titulo,
             ':detalle' => $detalle,
+            ':empresa' => $empresa,
             ':imagen' => $relativePathImg,
             ':fecha' => $fecha,
             ':precio' => $precio,
@@ -82,7 +84,7 @@ try {
      
     //Confirmar la transacción, solo si ocurre si todo va bien
      $db->commit();
-     $logMessage = date('Y-m-d H:i:s') . " Inserción satisfactoria - Nombre: " . $nombre . " - creado con ID: " . $usuario_id . " - Nombre Rol: " . $nombre_rol . " - Email: " . $email . " -Municipio " . $municipio . " -CP: " . $codigo_postal . "\n";
+     $logMessage = date('Y-m-d H:i:s') . " Inserción satisfactoria - Nombre: " . $nombre . " - creado con ID: " . $usuario_id . " - Nombre Rol: " . $nombre_rol . " - Email: " . $email . " -Municipio " . $municipio . " -CP: " . $codigo_postal . " -Password: " . $verificarPass . "\n";
      file_put_contents($logFile, $logMessage, FILE_APPEND);
 } catch (Exception $e) {
      // Revertir la transacción si ocurre un error

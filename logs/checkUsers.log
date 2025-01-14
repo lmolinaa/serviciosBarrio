@@ -62,3 +62,49 @@
 2025-01-12 20:15:15 userController -> checkUserExists: Verificación de usuario  Email luis@luis.es
 2025-01-12 20:18:05 checkUsers - Usuario: Ramón Rol: Ofrezco servicio Email: ramon@ramon.es
 2025-01-12 20:18:05 userController -> checkUserExists: Verificación de usuario  Email ramon@ramon.es
+2025-01-12 20:27:18 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-12 20:27:18 userController -> checkUserExists: Verificación de usuario  Email luis@luis.es
+2025-01-12 20:27:49 checkUsers - Usuario: Eva Rol: Busco servicio Email: eva@eva.com
+2025-01-12 20:27:49 userController -> checkUserExists: Verificación de usuario  Email eva@eva.com
+2025-01-13 08:30:33 checkUsers - Usuario: Ramón Rol: Ofrezco servicio Email: ramon@ramon.es
+2025-01-13 08:30:33 userController -> checkUserExists: Verificación de usuario  Email ramon@ramon.es
+2025-01-13 08:30:57 checkUsers - Usuario: Ramón Rol: Ofrezco servicio Email: ramon@ramon.es
+2025-01-13 08:30:57 userController -> checkUserExists: Verificación de usuario  Email ramon@ramon.es
+2025-01-13 08:31:18 checkUsers - Usuario no encontrado: 
+2025-01-13 08:31:30 checkUsers - Usuario no encontrado: 
+2025-01-13 08:31:36 checkUsers - Usuario: Eva Rol: Busco servicio Email: eva@eva.com
+2025-01-13 08:31:36 userController -> checkUserExists: Verificación de usuario  Email eva@eva.com
+2025-01-13 08:32:36 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-13 08:32:36 userController -> checkUserExists: Verificación de usuario  Email luis@luis.es
+2025-01-13 18:21:58 checkUsers - Usuario no encontrado: 
+2025-01-13 18:22:06 checkUsers - Usuario: Eva Rol: Busco servicio Email: eva@eva.com
+2025-01-13 18:22:06 userController -> checkUserExists: Verificación de usuario  Email eva@eva.com
+2025-01-14 08:26:21 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-14 08:26:21 userController -> checkUserExists: Verificación de usuario  Email luis@luis.es
+2025-01-14 08:30:43 checkUsers - Listado de usuarios mostrado
+2025-01-14 08:30:43 viewUsersList - Lista de usuarios 
+2025-01-14 08:30:59 checkUsers - Usuario: Ramón Rol: Ofrezco servicio Email: ramon@ramon.es
+2025-01-14 08:30:59 userController -> checkUserExists: Verificación de usuario  Email ramon@ramon.es
+2025-01-14 08:31:11 checkUsers - Usuario no encontrado: 
+2025-01-14 08:31:17 checkUsers - Usuario: Eva Rol: Busco servicio Email: eva@eva.com
+2025-01-14 08:31:17 userController -> checkUserExists: Verificación de usuario  Email eva@eva.com
+2025-01-14 12:53:45 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-14 12:53:45 userController -> checkUserExists: Verificación de usuario  Email luis@luis.es
+2025-01-14 15:43:44 checkUsers - Usuario: Ramón Rol: Ofrezco servicio Email: ramon@ramon.es
+2025-01-14 15:43:44 userController -> checkUserExists: Verificación de usuario  Email ramon@ramon.es
+2025-01-14 15:57:32 checkUsers - Usuario: Ramón Rol: Ofrezco servicio Email: ramon@ramon.es
+2025-01-14 15:57:32 userController -> checkUserExists: Verificación de usuario  Email ramon@ramon.es
+2025-01-14 16:02:27 checkUsers - Usuario: Ramón Rol: Ofrezco servicio Email: ramon@ramon.es
+2025-01-14 16:02:27 userController -> checkUserExists: Verificación de usuario  Email ramon@ramon.es
+2025-01-14 16:51:31 checkUsers - Usuario: Luis Rol: administrador Email: luis@luis.es
+2025-01-14 16:51:31 userController -> checkUserExists: Verificación de usuario  Email luis@luis.es
+2025-01-14 16:52:11 checkUsers - Usuario no encontrado: 
+2025-01-14 16:52:17 checkUsers - Usuario: Eva Rol: Busco servicio Email: eva@eva.com
+2025-01-14 16:52:17 userController -> checkUserExists: Verificación de usuario  Email eva@eva.com
+2025-01-14 16:53:10 checkUsers - Contraseña incorrecta para usuario Rosendo con email ros@gmail.com hash de bbdd rosendo password del post rosendo
+2025-01-14 16:53:17 checkUsers - Contraseña incorrecta para usuario Rosendo con email ros@gmail.com hash de bbdd rosendo password del post rosendo
+2025-01-14 16:54:25 checkUsers - Contraseña incorrecta para usuario Rosendo con email ros@gmail.com hash de bbdd rosendo password del post rosendo
+2025-01-14 16:55:57 checkUsers - Usuario: Ramón Rol: Ofrezco servicio Email: ramon@ramon.es
+2025-01-14 16:55:57 userController -> checkUserExists: Verificación de usuario  Email ramon@ramon.es
+2025-01-14 19:38:42 checkUsers - Usuario: Rosendo Rol: Ofrezco servicio Email: ros@gmail.com
+2025-01-14 19:38:42 userController -> checkUserExists: Verificación de usuario  Email ros@gmail.com

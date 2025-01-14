@@ -55,10 +55,10 @@ function checkAccess($requiredPermission) {
         'administrador' => [
             'login','dashboard', 'offer_services', 'search_services', 'view_content', 'edit_content', 'delete_content',
         ],
-        'usuarioOfrece' => [
+        'Ofrezco servicio' => [
             'login','dashboard', 'offer_services', 'view_content',
         ],
-        'usuarioBusca' => [
+        'Busco servicio' => [
             'login','dashboard', 'view_content',
         ],
     ];
